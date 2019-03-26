@@ -1,0 +1,32 @@
+.content {
+  margin-top: $space-double;
+  @include rwd(medium) {
+    margin-top: $space-triple;
+  }
+  &--with-sidebar {
+    display: flex;
+    & .content {
+      &__left {
+        max-width: 100%;
+        @include rwd(medium) {
+          width: 76%;
+        }
+      }
+      &__right {
+        display: none;
+        @include rwd(medium) {
+          display: block;
+          width: 24%;
+          padding-left: 77px;
+          border-left: 1px solid $text-color-gray--lighter;
+        }
+      }
+    }
+  }
+  &--article {
+    margin-top: 25px;
+    & .sidebar {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/*
+h1
+h2
+h3
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+}
+
+h1, .h1 {
+  line-height: 27px;
+  font-size: rem(20);
+  @include rwd(tablet) {
+    line-height: 43px;
+    font-size: rem(32);
+  }
+  @include rwd(medium) {
+    line-height: 51px;
+    font-size: rem(38);
+  }
+}
+
+h2, .h2 {
+  line-height: 43px;
+  font-size: rem(24);
+
+  @include rwd(medium) {
+    font-size: rem(32);
+  }
+}
+
+h3, .h3 {
+  line-height: 32px;
+  font-size: rem(18);
+
+  @include rwd(medium) {
+    font-size: rem(24);
+  }
+}
+
+h4, .h4 {
+  line-height: 27px;
+  font-size: rem(16);
+
+  @include rwd(medium) {
+    font-size: rem(20);
+  }
+}
+
+h5, .h5 {
+  line-height: 22px;
+  font-size: rem(14);
+
+  @include rwd(medium) {
+    font-size: rem(16);
+  }
+}
+
+h6, .h6 {
+  font-weight: 300;
+  line-height: normal;
+  font-size: rem(18);
+
+  @include rwd(medium) {
+    font-size: rem(24);
+  }
+}

@@ -1,0 +1,143 @@
+.header-search {
+  @include rwdmax(mobile) {
+    display: none;
+
+    .menu-open & {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      z-index: 120;
+      width: 100vw;
+      left: 0;
+      right: 0;
+      padding: 0;
+
+
+      .search-icon {
+        svg {
+          margin-top: 0;
+        }
+      }
+
+      .main-search {
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+      }
+
+      .search-input {
+        padding-left: 25px;
+      }
+
+
+      .search-submit {
+        right: 25px !important;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          viewBox: 0 0 18 18;
+        }
+      }
+
+      #SearchArrow {
+        display: none;
+      }
+    }
+  }
+
+  padding-left: 50px;
+  padding-right: 30px;
+  position: relative;
+  height: 40px;
+
+
+  .search-icon {
+    svg {
+      margin-top: 50%;
+    }
+
+    svg path {
+      stroke: $text-color;
+
+      .dark & {
+        stroke: #FFF;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg path {
+        stroke: $brandy-rose;
+      }
+    }
+  }
+
+  .main-search {
+    position: absolute;
+    top: 0;
+
+    .search-input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: #ffffff;
+      font-weight: 300;
+
+      &::placeholder {
+        color: initial;
+      }
+
+      .dark & {
+        background-color: $mine-shaft;
+        color: #FFF;
+
+        &::placeholder {
+          color: #FFF;
+        }
+      }
+    }
+
+    .search-submit {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      right: 0;
+      position: absolute;
+      padding: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-appearance: none;
+    }
+
+
+    @include rwd(mobile) {
+      width: 0;
+      height: 80%;
+      right: 100px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(40px);
+      transition: all 0.4s ease;
+
+      .search-input {
+        border-bottom: 2px solid $brandy-rose;
+      }
+
+      #searchMagnifying {
+        display: none;
+      }
+    }
+
+  }
+
+  &.search-open {
+    .main-search {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+      width: 350px;
+    }
+  }
+}

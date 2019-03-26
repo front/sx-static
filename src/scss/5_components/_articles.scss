@@ -1,0 +1,147 @@
+.articles {
+  margin-bottom: $space-double;
+  @include rwd(medium) {
+    margin-bottom: $space-quadruple;
+  }
+  &__item {
+    @include rwd(medium) {
+      display: flex;
+    }
+    &:not(:last-child) {
+      margin-bottom: $space-double;
+    }
+  }
+  .article {
+    @include rwd(tablet) {
+      display: flex;
+    }
+    &__img {
+      width: 250px;
+      height: 250px;
+      margin-right: 40px;
+      object-fit: cover;
+      display: none;
+      @include rwd(tablet) {
+        display: block;
+      }
+      &-mobile {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        @include rwd(tablet) {
+          display: none;
+        }
+      }
+    }
+    &__info {
+      @include rwd(medium) {
+        padding-right: 40px;
+      }
+      &__header {
+        display: flex;
+        @include rwd(tablet) {
+          display: block;
+        }
+      }
+      &__tag {
+        font-family: Lora;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 18px;
+        font-size: 13px;
+        color: $dark-orange;
+        margin-top: 24px;
+        margin-bottom: 15px;
+        margin-left: 0;
+      }
+      &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 22px;
+        font-size: rem(16);
+        @include rwd(tablet) {
+          line-height: 27px;
+          font-size: rem(20);
+        }
+        color: $black;
+        margin-top: 15px;
+        margin-bottom: 13px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__credits {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        font-size: 13px;
+        color: $steel;
+        margin-top: 13px;
+        margin-bottom: 24px;
+      }
+      &__content {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: rem(16);
+        @include rwd(tablet) {
+          font-size: rem(18);
+        }
+        color: $mine-shaft;
+        margin-top: 24px;
+        margin-bottom: 0!important;
+      }
+    }
+    &--half {
+      @include rwd(medium) {
+        width: 50%;
+      }
+      & .article {
+        &__img {
+          max-width: 375px;
+          @include rwd(tablet) {
+            width: 196px;
+            height: 196px;
+            margin-right: 40px;
+          }
+        }
+        &__info {
+          @include rwd(medium) {
+            padding-right: 40px;
+          }
+          &__tag {
+            margin-top: 14px;
+            margin-bottom: 5px;
+          }
+          &__title {
+            margin-top: 5px;
+            margin-bottom: 3px;
+          }
+          &__credits {
+            margin-top: 3px;
+            margin-bottom: 4px;
+          }
+          &__content {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+  &--half {
+    display: flex;
+    flex-wrap: wrap;
+    @include rwd(medium) {
+      & .articles {
+        &__item {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
