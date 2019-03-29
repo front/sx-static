@@ -20,6 +20,7 @@
 }
 
 .btn {
+  display: inline-block;
   &--rounded {
     background: $brandy-rose;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.08);
@@ -29,6 +30,22 @@
     text-align: center;
     color: $romance;
     padding: 15px 30px;
+    &:hover {
+      background: $dark-tan;
+    }
+  }
+
+  &--bigger{
+    font-weight: 500;
+    padding: 20px 30px;
+    background: $brandy-rose;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    line-height: (24/18);
+    font-size: rem(18);
+    text-align: center;
+    color: $romance;
+
     &:hover {
       background: $dark-tan;
     }

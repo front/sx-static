@@ -21,6 +21,9 @@
   <link rel="stylesheet" id="Section-Row-css"
         href="https://cdn.jsdelivr.net/npm/@frontkom/section-row@0.0.7/build/style.css?ver=0.0.7" type="text/css"
         media="all">
+  <link rel="stylesheet" id="Section-Columns-css"
+          href="https://cdn.jsdelivr.net/npm/@frontkom/g-content-in-columns@0.4.5/build/style.css?ver=0.4.5" type="text/css"
+          media="all">
   <link rel="stylesheet" type="text/css" href="build/css/main.css">
 
 </head>
@@ -291,24 +294,37 @@
     <main id="main" class="site-main" role="main">
       <div class="container">
         <br>
-        <ol>
-          <li><a href="blog-article-list.html">Blog list</a></li>
-          <li><a href="blog-article-list-with-side-bar.html">Blog list with sidebar</a></li>
-          <li><a href="blog-article-right-column.html">Blog article right column</a></li>
-          <li><a href="blog-article-fullwidth.html">Blog article fullwidth</a></li>
-          <li><a href="blog-article-centered.html">Blog article centered</a></li>
-          <li><a href="404.html">404</a></li>
-          <li><a href="search-results.html">Search results</a></li>
 
-          <li><b>Blocks</b></li>
 
-          <li><a href="cards.html">Cards</a></li>
-          <li><a href="dark-grid.html">Dark grid</a></li>
-          <li><a href="faq.html">CB - FAQ</a></li>
-          <li><a href="img-txt.html">Img + txt</a></li>
-          <li><a href="img-txt-no-bg.html">Img + txt no BG</a></li>
-        </ol>
-        <br>
+        <div class="wp-block-starterx-cards alignwide">
+          <div class="row columns-3">
+            <div class="wp-block-starterx-cards-item card">
+              <figure class="card__image" style="background-image:url('https://www.fillmurray.com/g/320/320')">
+                <img alt="" src="https://www.fillmurray.com/g/320/320"></figure>
+              <h3 class="card__title">Element title with one line</h3>
+              <p class="card__desc">Such a collection of useful, related resources, interconnected via hypertext links
+                is dubbed a web of information.</p>
+            </div>
+
+            <div class="wp-block-starterx-cards-item card">
+              <figure class="card__image" style="background-image:url('https://www.fillmurray.com/g/320/320')">
+                <img alt="" src="https://www.fillmurray.com/g/320/320"></figure>
+              <h3 class="card__title">Element title with one line</h3>
+              <p class="card__desc">Such a collection of useful, related resources, interconnected via hypertext links
+                is dubbed a web of information.</p>
+            </div>
+
+            <div class="wp-block-starterx-cards-item card">
+              <figure class="card__image" style="background-image:url('https://www.fillmurray.com/g/320/320')">
+                <img alt="" src="https://www.fillmurray.com/g/320/320"></figure>
+              <h3 class="card__title">Element title with more than one line</h3>
+              <p class="card__desc">Such a collection of useful, related resources, interconnected via hypertext links
+                is dubbed a web of information.</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </main><!-- #main -->
   </div><!-- #primary -->

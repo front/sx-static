@@ -77,7 +77,7 @@
     }
   }
 
-    // item open
+  // item open
   .accordion__item--open {
     .accordion__item-toggle-button {
       &::before {
@@ -88,6 +88,18 @@
         background-color: $dark-tan;
         transform: translateY(-50%) rotate(0);
       }
+    }
+  }
+}
+
+.wp-block-cloudblocks-accordion.save {
+  .accordion {
+    &__item--open .accordion__item-content {
+      display: block;
+    }
+
+    &__item-content {
+      display: none;
     }
   }
 }
