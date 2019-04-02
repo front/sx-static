@@ -1,0 +1,161 @@
+input{
+  &[type=text], &[type=email], &[type=password]{
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 13px 20px;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    box-sizing: border-box;
+
+    @include placeholder{
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+
+$radio: input-radio;
+.#{$radio}{
+
+  input[type=radio] {
+    display: none;
+
+    &:checked{
+      + .#{$radio}__icon{
+        &:before{
+          display: block;
+        }
+      }
+    }
+
+    &:disabled{
+      + .#{$radio}__icon {
+        border-color: #d6d6d6;
+        &:before{
+          background: #d6d6d6;
+        }
+      }
+
+      ~ .#{$radio}__desc {
+        color: #d6d6d6;
+      }
+    }
+
+  }
+
+  &__label{
+    display: inline-flex;
+
+    &:focus {
+      .#{$radio}__icon {
+        border-color: #996152;
+      }
+    }
+  }
+
+  &__icon{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    flex-shrink: 0;
+    display: block;
+    margin-right: 10px;
+    position: relative;
+    border:1px solid #000;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $brandy-rose;
+      display: none;
+
+      .wp-block-newsletter--colored & {
+        background: #000;
+      }
+
+    }
+  }
+}
+
+
+$checkbox: input-checkbox;
+.#{$checkbox} {
+
+  input[type=checkbox] {
+    display: none;
+
+    &:checked {
+      + .#{$checkbox}__icon {
+        &:before {
+          display: block;
+        }
+      }
+    }
+
+    &:disabled {
+      + .#{$checkbox}__icon {
+        border-color: #d6d6d6;
+
+        &:before {
+          fill: #d6d6d6;
+        }
+      }
+
+      ~ .#{$checkbox}__desc {
+        color: #d6d6d6;
+      }
+    }
+
+  }
+
+  &__label {
+    display: inline-flex;
+
+    &:focus {
+      .#{$checkbox}__icon {
+        border-color: #996152;
+      }
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    flex-shrink: 0;
+    display: block;
+    margin-right: 10px;
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 2px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 8px;
+      border-radius: 50%;
+      background: url(/img/check.svg);
+      display: none;
+
+      .wp-block-newsletter--colored & {
+        background: #000;
+      }
+
+    }
+  }
+}

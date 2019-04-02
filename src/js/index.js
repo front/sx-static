@@ -6,6 +6,7 @@ import Menu from './components/menu';
 import Search from './components/search';
 import Accordion from './components/accordion';
 import AlignFull from './components/alignfull';
+//import DarkColumns from './components/dark-columns';
 
 $(document).ready(() => {
     (async () => {
@@ -22,5 +23,7 @@ $(document).ready(() => {
     const accordion = new Accordion();
     accordion.init();
     const alignfull = new AlignFull();
-    AlignFull.init();
+    alignfull.init();
+    //const darkColumns = new DarkColumns();
+    //darkColumns.init();
 });

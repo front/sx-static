@@ -2,6 +2,8 @@ const magicImporter = require('node-sass-magic-importer');
 const path = require('path');
 const extractCss = require('mini-css-extract-plugin');
 
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 const IS_PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -106,6 +108,13 @@ module.exports = {
     plugins: [
         new extractCss({
             filename: 'css/main.css',
-        })
+        }),
+        new BrowserSyncPlugin({
+            // BrowserSync options
+            host: 'localhost',
+            port: 3001,
+            proxy: 'starterx-static.localhost',
+            open: false,
+        }),
     ],
 };

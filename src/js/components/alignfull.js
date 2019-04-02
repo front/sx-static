@@ -3,7 +3,7 @@ class AlignFull{
 
     }
 
-    static calculation(){
+    calculation(){
         var body = document.querySelector('body');
 
         if (window.innerWidth > body.clientWidth + 5) {
@@ -14,8 +14,8 @@ class AlignFull{
         }
     }
 
-    static init(){
-        AlignFull.calculation();
+    init(){
+        this.calculation();
     }
 }
 
