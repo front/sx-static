@@ -2,7 +2,7 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 <head>
 
-  <title>Blog Article Full Width - StarterTheme</title>
+  <title>Styleguide - StarterTheme</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,21 +10,28 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Styleguide - StarterTheme">
-  <meta property="og:url" content="/styleguide/">
+  <meta property="og:url" content="styleguide/">
   <meta property="og:site_name" content="StarterTheme">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Styleguide - StarterTheme">
 
   <link rel="stylesheet" id="wp-block-library-css"
-          href="https://cdn.jsdelivr.net/npm/@wordpress/block-library@2.4.0/build-style/style.css" type="text/css"
-          media="all">
+        href="https://cdn.jsdelivr.net/npm/@wordpress/block-library@2.4.0/build-style/style.css" type="text/css"
+        media="all">
   <link rel="stylesheet" id="Section-Row-css"
         href="https://cdn.jsdelivr.net/npm/@frontkom/section-row@0.0.7/build/style.css?ver=0.0.7" type="text/css"
         media="all">
+  <link rel="stylesheet" id="ddd"
+          href="https://cdn.jsdelivr.net/npm/@frontkom/g-hero-section@0.7.5/build/style.css?ver=0.7.5" type="text/css"
+          media="all">
+  <link rel="stylesheet" id="Section-Columns-css"
+          href="https://cdn.jsdelivr.net/npm/@frontkom/g-content-in-columns@0.4.5/build/style.css?ver=0.4.5" type="text/css"
+          media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@frontkom/starterx-quote-background@2.0.0/build/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@frontkom/starterx-employees@1.2.1/build/style.css">
   <link rel="stylesheet" type="text/css" href="build/css/main.css">
 
 </head>
-
 
 <body>
 <header class="header">
@@ -33,14 +40,14 @@
       <div class="menu">
         <div class="header-logo">
           <a href="#" class="logo-link">
-            <img src="./img/logo.svg" alt="logo">
+            <img src="./img/logo.svg">
             <h1 class="site-title">StarterTheme</h1>
           </a>
         </div>
         <nav class="main-menu-items">
           <ul class="menu-item">
             <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-41 main-menu-list">
-              <a href="http://dev.starter-theme.no/">
+              <a href="/">
                 <span>Home</span>
               </a>
             </li>
@@ -352,126 +359,32 @@
 </header>
 
 <div id="content" class="site-content">
-  <div id="primary" class="content-area container">
-    <main id="main" class="site-main search-results" role="main">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">home</a>
-        </li>
-        <li class="breadcrumbs__item">Search</li>
-      </ul>
-      <header class="search-results__header container--centered">
-        <h1 class="search-results__title">Search Results for</h1>
-        <span class="search-results__query">Coal</span>
-        <span class="search-results__hits">(20 hits)</span>
-      </header><!-- .page-header -->
-      <div class="search-posts container--centered">
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+
+      <div class="entry-content">
+
+        <h1>Quotes + background</h1>
+
+        <div style="background-image:url('http://nbr.devz.no/wp-content/uploads/2019/03/timothy-rhyne-601263-unsplash.jpg')" class="wp-block-starterx-quote-background alignwide">
+          <blockquote>
+            <span class="quote__icon quote__icon__before"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0OSA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjE2IDNDMTQuMzQ2NyA1LjIgMTIuNjQgOC4zIDExLjA0IDEyLjNDOS40NCAxNi4zIDguNjQgMjAuMjUgOC42NCAyNC4xNUM4LjY0IDI1LjM1IDguNjkzMzMgMjYuMjUgOC44IDI2Ljg1QzEwLjE4NjcgMjYuMjUgMTEuNTIgMjUuOTUgMTIuOCAyNS45NUMxNC45MzMzIDI1Ljk1IDE2LjY5MzMgMjYuNjUgMTguMDggMjguMDVDMTkuNDY2NyAyOS40NSAyMC4xNiAzMS4yIDIwLjE2IDMzLjNDMjAuMTYgMzYgMTkuMzA2NyAzOC4xNSAxNy42IDM5Ljc1QzE1Ljg5MzMgNDEuMjUgMTMuODEzMyA0MiAxMS4zNiA0MkM3Ljg0IDQyIDUuMDY2NjcgNDAuNzUgMy4wNCAzOC4yNUMxLjAxMzMzIDM1LjY1IDAgMzIuMzUgMCAyOC4zNUMwIDI0LjI1IDEuMTIgMTkuMyAzLjM2IDEzLjVDNS43MDY2NyA3LjcgOC41MzMzMyAzLjIgMTEuODQgMEwxNi4xNiAzWk00NC4zMiAzQzQyLjUwNjcgNS4yIDQwLjggOC4zIDM5LjIgMTIuM0MzNy42IDE2LjMgMzYuOCAyMC4yNSAzNi44IDI0LjE1QzM2LjggMjUuMzUgMzYuODUzMyAyNi4yNSAzNi45NiAyNi44NUMzOC4zNDY3IDI2LjI1IDM5LjY4IDI1Ljk1IDQwLjk2IDI1Ljk1QzQzLjA5MzMgMjUuOTUgNDQuODUzMyAyNi42NSA0Ni4yNCAyOC4wNUM0Ny42MjY3IDI5LjQ1IDQ4LjMyIDMxLjIgNDguMzIgMzMuM0M0OC4zMiAzNiA0Ny40NjY3IDM4LjE1IDQ1Ljc2IDM5Ljc1QzQ0LjA1MzMgNDEuMjUgNDEuOTczMyA0MiAzOS41MiA0MkMzNiA0MiAzMy4yMjY3IDQwLjc1IDMxLjIgMzguMjVDMjkuMTczMyAzNS42NSAyOC4xNiAzMi4zNSAyOC4xNiAyOC4zNUMyOC4xNiAyNC4yNSAyOS4yOCAxOS4zIDMxLjUyIDEzLjVDMzMuODY2NyA3LjcgMzYuNjkzMyAzLjIgNDAgMEw0NC4zMiAzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="></span>
+            <p>Min jobb er så mye <br>enklere når Norsk Bygningsrådgivning tar seg av byggesøknadene!</p>
+            <span class="quote__icon quote__icon__after"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDMiIHZpZXdCb3g9IjAgMCA0OSA0MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgMzkuNjAwMUM1LjgxMzMzIDM3LjQwMDEgNy41MiAzNC4zMDAxIDkuMTIgMzAuMzAwMUMxMC43MiAyNi4zMDAxIDExLjUyIDIyLjM1MDEgMTEuNTIgMTguNDUwMUMxMS41MiAxNy4yNTAxIDExLjQ2NjcgMTYuMzUwMSAxMS4zNiAxNS43NTAxQzkuOTczMzMgMTYuMzUwMSA4LjY0IDE2LjY1MDEgNy4zNiAxNi42NTAxQzUuMjI2NjcgMTYuNjUwMSAzLjQ2NjY3IDE1Ljk1MDEgMi4wOCAxNC41NTAxQzAuNjkzMzM1IDEzLjE1MDEgMCAxMS40MDAxIDAgOS4zMDAxQzAgNi42MDAxIDAuODUzMzMxIDQuNTAwMSAyLjU2IDMuMDAwMUM0LjI2NjY2IDEuNDAwMSA2LjM0NjY3IDAuNjAwMDk4IDguOCAwLjYwMDA5OEMxMi4zMiAwLjYwMDA5OCAxNS4wOTMzIDEuOTAwMSAxNy4xMiA0LjUwMDFDMTkuMTQ2NyA3LjAwMDEgMjAuMTYgMTAuMjUwMSAyMC4xNiAxNC4yNTAxQzIwLjE2IDE4LjM1MDEgMTguOTg2NyAyMy4zMDAxIDE2LjY0IDI5LjEwMDFDMTQuNCAzNC45MDAxIDExLjYyNjcgMzkuNDAwMSA4LjMyIDQyLjYwMDFMNCAzOS42MDAxWk0zMi4xNiAzOS42MDAxQzMzLjk3MzMgMzcuNDAwMSAzNS42OCAzNC4zMDAxIDM3LjI4IDMwLjMwMDFDMzguODggMjYuMzAwMSAzOS42OCAyMi4zNTAxIDM5LjY4IDE4LjQ1MDFDMzkuNjggMTcuMjUwMSAzOS42MjY3IDE2LjM1MDEgMzkuNTIgMTUuNzUwMUMzOC4xMzMzIDE2LjM1MDEgMzYuOCAxNi42NTAxIDM1LjUyIDE2LjY1MDFDMzMuMzg2NyAxNi42NTAxIDMxLjYyNjcgMTUuOTUwMSAzMC4yNCAxNC41NTAxQzI4Ljg1MzMgMTMuMTUwMSAyOC4xNiAxMS40MDAxIDI4LjE2IDkuMzAwMUMyOC4xNiA2LjYwMDEgMjkuMDEzMyA0LjUwMDEgMzAuNzIgMy4wMDAxQzMyLjQyNjcgMS40MDAxIDM0LjUwNjcgMC42MDAwOTggMzYuOTYgMC42MDAwOThDNDAuNDggMC42MDAwOTggNDMuMjUzMyAxLjkwMDEgNDUuMjggNC41MDAxQzQ3LjMwNjcgNy4wMDAxIDQ4LjMyIDEwLjI1MDEgNDguMzIgMTQuMjUwMUM0OC4zMiAxOC4zNTAxIDQ3LjE0NjcgMjMuMzAwMSA0NC44IDI5LjEwMDFDNDIuNTYgMzQuOTAwMSAzOS43ODY3IDM5LjQwMDEgMzYuNDggNDIuNjAwMUwzMi4xNiAzOS42MDAxWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="></span>
+            <cite>Thomas Fosshaug, <br>boligkonsulent i ABC-Hus</cite></blockquote>
         </div>
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
-        </div>
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
-        </div>
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
-        </div>
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
-        </div>
-        <div class="search-post">
-          <div class="search-post__title">
-            Coal a combustible sedimentary rock formed in coal seams
-          </div>
-          <a class="search-post__link" href="#">https://domain.com/category...</a>
-          <div class="search-post__excerpt">
-            Are we in agreeance programmatically we want to empower the team with the right tools and guidance to
-            uplevel our craft and build better yet ladder up / ladder back to the strategy...
-          </div>
-        </div>
+
+        <br>
+        <br>
+        <br>
+
       </div>
-      <ul class="pagination">
-        <li class="pagination__item nav first">
-          <a class="pagination__link" href="#!">
-            <img class="line" src="./img/svg/line.svg" alt="line">
-            <img class="arrow arrow--left" src="./img/svg/arrow.svg" alt="arrow">
-          </a>
-        </li>
-        <li class="pagination__item nav previous">
-          <a class="pagination__link" href="#!">
-            <img class="arrow arrow--left" src="./img/svg/arrow.svg" alt="arrow">
-          </a>
-        </li>
-        <li class="pagination__item active">
-          <a class="pagination__link" href="#!">1</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#!">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#!">3</a>
-        </li>
-        <li class="pagination__item pagination__item--sm-hidden">
-          <a class="pagination__link" href="#!">4</a>
-        </li>
-        <li class="pagination__item pagination__item--sm-hidden">
-          <a class="pagination__link" href="#!">5</a>
-        </li>
-        <li class="pagination__item dots">
-          <a class="pagination__link" href="#!">...</a>
-        </li>
-        <li class="pagination__item nav next">
-          <a class="pagination__link" href="#!">
-            <img class="arrow arrow--right" src="./img/svg/arrow.svg" alt="arrow">
-          </a>
-        </li>
-        <li class="pagination__item nav last">
-          <a class="pagination__link" href="#!">
-            <img class="arrow arrow--right" src="./img/svg/arrow.svg" alt="arrow">
-            <img class="line" src="./img/svg/line.svg" alt="line">
-          </a>
-        </li>
-      </ul>
+
+
     </main><!-- #main -->
   </div><!-- #primary -->
-</div>
+</div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
   <div class="container alignwide">
@@ -481,7 +394,7 @@
           <div class="textwidget"></div>
         </section>
         <section id="media_image-2" class="widget widget_media_image"><a
-                href="#">
+          href="#">
           <img width="68" height="91"
                src="/wp-content/uploads/2019/02/Logo_light.png"
                class="image wp-image-128  attachment-full size-full"

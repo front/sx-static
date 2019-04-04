@@ -20,6 +20,7 @@ input{
 
 $radio: input-radio;
 .#{$radio}{
+  user-select: none;
 
   input[type=radio] {
     display: none;
@@ -45,6 +46,12 @@ $radio: input-radio;
       }
     }
 
+  }
+
+  &__desc{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: (19/14);
   }
 
   &__label{
@@ -91,6 +98,7 @@ $radio: input-radio;
 
 $checkbox: input-checkbox;
 .#{$checkbox} {
+  user-select: none;
 
   input[type=checkbox] {
     display: none;
@@ -117,6 +125,12 @@ $checkbox: input-checkbox;
       }
     }
 
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: (19/14);
   }
 
   &__label {
@@ -149,13 +163,86 @@ $checkbox: input-checkbox;
       width: 10px;
       height: 8px;
       border-radius: 50%;
-      background: url(/img/check.svg);
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACzSURBVHgBfY/BDcIgFIZ5tKknakdgBUdAT950BCfQpjHRC9J40IvaDRxBb95kBLuBXcMeQKCSmB4gIfzAl/e+ByiwbmKVDUn6shmHwJSQqzloEJQXvgMEMxMbwJjB88Tf9uPTtmy6PTYOOvOl1qiy2UAjlos6/hWggySRj8OGRRHOPKSVzseFqG2ObVmtlPSwb60VKifrfeXv0PkI6uHuEe6sKOf/zm4Y4+CErbjbGBb94b6STTcc2+w5AAAAAABJRU5ErkJggg==);
       display: none;
 
       .wp-block-newsletter--colored & {
         background: #000;
       }
 
+    }
+  }
+}
+
+
+.input-toggle {
+  position: relative;
+  padding-left: 58px;
+
+  label {
+    user-select: none;
+    font-weight: bold;
+    color: #000;
+  }
+
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+
+    + label {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: (19/14);
+
+      color: #333333;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 42px;
+        height: 22px;
+        background: #996152;
+        border-radius: 11px;
+        transition: all 150ms ease-out;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        top: 1px;
+        transition: all 150ms ease-out;
+        background: #fff;
+        left: 21px;
+      }
+    }
+
+    &:not(:checked) {
+      position: absolute;
+      left: -9999px;
+
+      + label {
+        &:before {
+          background: #333;
+        }
+
+        &:after {
+          background: #fff;
+          left: 1px;
+        }
+      }
+    }
+
+    &:disabled{
+      + label{
+        color: #d6d6d6;
+
+        &:before {
+          background: #d6d6d6;
+        }
+      }
     }
   }
 }
