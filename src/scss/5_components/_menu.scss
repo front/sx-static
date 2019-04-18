@@ -53,17 +53,19 @@
         @extend .flex-ai-center;
         cursor: pointer;
 
-        svg path {
-          fill: $text-color;
+        svg {
+          width: 14px;
+          height: 9px;
+          --fill-color: #{$text-color};
 
           .dark & {
-            fill: #FFF;
+            --fill-color: #FFF;
           }
         }
 
         &:hover {
-          svg path {
-            fill: $brandy-rose;
+          svg {
+            --fill-color: #{$brandy-rose};
           }
         }
 
@@ -186,13 +188,13 @@
         }
 
         &:hover {
-          svg > path {
-            fill: $brandy-rose;
+          svg {
+            --fill-color: #{$brandy-rose};
           }
         }
 
         .dark & {
-          color: #FFF;
+          --fill-color: #FFF;
         }
       }
     }
