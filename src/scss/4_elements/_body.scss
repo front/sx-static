@@ -29,7 +29,7 @@ body{
     padding-right: 50px;
   }
   @include rwd(large) {
-    max-width: 1376px;
+    max-width: $content-width-wide;
   }
   &--centered {
     margin-left: auto;

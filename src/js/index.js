@@ -37,5 +37,13 @@ jQuery.noConflict();
 
         const gallery = new Gallery();
         gallery.init();
+
+        var $el = $('.parallax-background');
+        $(window).on('scroll', function () {
+            var scroll = $(document).scrollTop();
+            $el.css({
+                'background-position': '50% ' + (-.1 * scroll) + 'px'
+            });
+        });
     });
 })(jQuery);

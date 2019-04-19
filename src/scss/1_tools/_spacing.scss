@@ -40,6 +40,8 @@
   left: 50%;
   transform: translateX(-50%);
   max-width: none !important;
+  margin-left: -1px;
+  padding-left: 1px;
 }
 
 [class*="-section-row-inner-"] {

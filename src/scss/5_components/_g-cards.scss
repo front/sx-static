@@ -9,13 +9,11 @@ $className: card;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  font-family: "poppins", Arial, sans-serif;
-
   .#{$className} {
     font-size: 18px;
     line-height: (29/18);
     padding: 20px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    border: 1px solid $semi-white;
     background: #fff;
     transition:background 0.3s ease-in-out;
 
@@ -60,7 +58,7 @@ $className: card;
     }
 
     &:hover{
-      background: #000;
+      background: $light-red;
 
       .#{$className}__title, .#{$className}__desc {
         color: #fff !important;

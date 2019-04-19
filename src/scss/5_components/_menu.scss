@@ -65,7 +65,7 @@
 
         &:hover {
           svg {
-            --fill-color: #{$brandy-rose};
+            --fill-color: #{$light-red};
           }
         }
 
@@ -189,12 +189,12 @@
 
         &:hover {
           svg {
-            --fill-color: #{$brandy-rose};
+            --fill-color: #{$light-red};
           }
         }
 
         .dark & {
-          --fill-color: #FFF;
+          color: $romance;
         }
       }
     }
