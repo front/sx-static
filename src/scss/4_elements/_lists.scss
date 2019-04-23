@@ -13,7 +13,7 @@ li {
 
 
 .content-area{
-  ul:not(.pagination) {
+  ul:not(.pagination):not(.wp-block-gallery) {
     list-style: none;
 
     li {
