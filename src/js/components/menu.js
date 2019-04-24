@@ -14,31 +14,24 @@ class Menu {
         document.querySelector('body').classList.toggle('menu-open');
       });
     }
-    for (let i = 0; i < this.mainNav.length; i++) {
-      this.mainNav[i].addEventListener('click', e => {
-        for (let j = 0; j < this.mainNav.length; j++) {
-          if (this.mainNav[j] != this.mainNav[i]) {
-            this.mainNav[j].querySelector('.main-item').classList.remove('active')
-            this.mainNav[j].querySelector('ul').style.maxHeight = null
-          }
-        }
-        this.mainNav[i].querySelector('.main-item').classList.toggle('active')
-        var item = this.mainNav[i].querySelector('ul')
-        if (item.style.maxHeight) {
-          item.style.maxHeight = null;
-        } else {
-          item.style.maxHeight = item.scrollHeight + 'px';
-        }
-      });
-    }
+
 
     if (this.submenu) {
       for (let i = 0; i < this.submenu.length; i++) {
         let subMenu = this.submenu[i];
         let subMenuParent = subMenu.previousElementSibling;
+        subMenuParent.classList.add('has-submenu');
         subMenuParent.addEventListener('click', e => {
           e.preventDefault();
-          subMenu.style.display = 'block';
+
+          if( this.isHidden(subMenu) ) {
+            subMenu.style.display = 'block';
+            subMenuParent.classList.add('is-opened');
+          } else{
+            subMenu.style.display = 'none';
+            subMenuParent.classList.remove('is-opened');
+          }
+
           let subMenuWidth = subMenu.offsetWidth;
           let subMenuChildMenu = subMenu.querySelector('.sub-menu');
           if (subMenuChildMenu) {
@@ -59,6 +52,11 @@ class Menu {
         }
       })
     }
+  }
+
+  isHidden(el) {
+    var style = window.getComputedStyle(el);
+    return (style.display === 'none')
   }
 
   init() {
