@@ -1260,7 +1260,7 @@ footer {
     font-weight: 600;
     line-height: normal;
     font-size: 18px;
-    color: #F0F0F0; }
+    color: #FFFFFF; }
   footer .widget_nav_menu .menu {
     list-style: none;
     padding: 0; }
@@ -1276,7 +1276,7 @@ footer {
     font-size: 16px; }
   footer a {
     color: #F0F0F0;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 16px; }
     footer a:before {
       content: "";
@@ -1295,6 +1295,22 @@ footer {
       visibility: visible;
       -webkit-transform: scaleX(1);
       transform: scaleX(1); }
+    .light footer a {
+      color: #202124; }
+  footer.light {
+    background-color: #FFFFFF;
+    color: #202124;
+    border-top: 1px solid #d1dbe6; }
+    footer.light .widget__title {
+      color: #202124; }
+    footer.light a {
+      color: #202124; }
+  footer .textwidget p, footer .textwidget .edit-post-layout__content th, .edit-post-layout__content footer .textwidget th, footer .textwidget .edit-post-layout__content td, .edit-post-layout__content footer .textwidget td, footer .textwidget .edit-post-layout__content li, .edit-post-layout__content footer .textwidget li, footer .textwidget .edit-post-layout__content .wp-block-button__link, .edit-post-layout__content footer .textwidget .wp-block-button__link {
+    font-size: 16px;
+    line-height: 1.75; }
+
+.copyright {
+  font-size: 13px; }
 
 .wp-block-cloudblocks-accordion.save .accordion {
   margin: 0;
