@@ -149,4 +149,8 @@
 
 .search-arrow-1{
   --fill-color: #{$dark-gray};
+
+  .dark & {
+    --fill-color: #{$romance};
+  }
 }

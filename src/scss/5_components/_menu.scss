@@ -539,15 +539,16 @@ header.dark {
           width: 10px;
           color: $gray;
           margin-top: -9px;
-          //background: url(/../src/icons/arrow.svg) 0 0 no-repeat;
           @include sprite('arrow', (
-              color: 'red'
+              color: '#{$button-gray}'
           ));
         }
 
         &.is-opened:after {
           transform: rotate(90deg);
-          --fill-color: #{$light-gray};
+          @include sprite('arrow', (
+               color: '#{$light-gray}'
+          ));
         }
       }
     }
