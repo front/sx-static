@@ -166,12 +166,14 @@
               </svg>
                         </span>
             <form class="main-search">
-              <input class="search-input" placeholder="Search" type="search" name="s" id="search">
-              <button class="search-submit" type="submit">
+              <label for="search">
+                <input class="search-input" placeholder="Search" type="search" name="s" id="search">
+              </label>
+              <a class="search-submit" type="submit">
                 <svg class="icon search-arrow">
                   <use xlink:href="build/spritemap.svg#search-arrow" class="search-arrow-1"></use>
                 </svg>
-              </button>
+              </a>
             </form>
           </div>
           <div class="language-selector">
@@ -663,20 +665,24 @@
                 <br>
 
                 <div>
-                  <input type="text" placeholder="E-mail address">
+                  <label for="input-email">
+                    <input id="input-email" type="text" placeholder="E-mail address">
+                  </label>
                 </div>
 
                 <br>
 
                 <div>
-                  <input type="text" placeholder="E-mail address" disabled>
+                  <label for="input-email-dis">
+                    <input id="input-email-dis" type="text" placeholder="E-mail address" disabled>
+                  </label>
                 </div>
 
                 <br>
 
                 <div class="input-submit">
-                  <label class="styled-input">
-                    <input class="styled-input__field" type="text" name="search" required>
+                  <label class="styled-input" for="styled-input__search">
+                    <input id="styled-input__search" class="styled-input__field" type="text" name="search" required>
                     <span class="styled-input__placeholder">Type to search:</span>
                   </label>
                   <button type="submit">
@@ -752,7 +758,8 @@
     <div class="row columns-4 column-gap-medium">
       <div>
         <section id="media_image-2" class="widget widget_media_image">
-          <img width="68" height="91" src="https://starter.devz.no/wp-content/uploads/2019/02/Logo_light.png" class="image wp-image-128  attachment-full size-full" alt="" style="max-width: 100%; height: auto;">
+<img width="68" height="91" src="https://starter.devz.no/wp-content/uploads/2019/02/Logo_light.png" class="image wp-image-128  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" alt="footer logo">
+
         </section>
         <section id="text-2" class="widget widget_text">
           <div class="textwidget"><p>Torvgaten 64, <br>
