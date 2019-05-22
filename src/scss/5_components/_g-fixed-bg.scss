@@ -10,6 +10,13 @@
   color: $romance;
 
   height: 0;
+  @include rwdmax(tablet) {
+    padding-bottom: 0px;
+    padding-top: 330px;
+    background-attachment: fixed;
+    background-size: 100vh;
+    background-position: 0 0!important;
+  }
   padding-bottom: 50.65%;
 
   &__overlay{

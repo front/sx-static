@@ -1818,6 +1818,13 @@ footer {
   color: #FFFFFF;
   height: 0;
   padding-bottom: 50.65%; }
+  @media (max-width: 767px) {
+    .fixed-bg {
+      padding-bottom: 0px;
+      padding-top: 330px;
+      background-attachment: fixed;
+      background-size: 100vh;
+      background-position: 0 0 !important; } }
   .fixed-bg__overlay {
     content: "";
     position: absolute;
@@ -2407,11 +2414,19 @@ img.mfp-img {
   .main-slide-carousel__toggle {
     position: absolute;
     bottom: 60px;
-    right: 155px;
     width: 24px;
     height: 24px;
     cursor: pointer;
     z-index: 9999; }
+    @media (max-width: 767px) {
+      .main-slide-carousel__toggle {
+        right: 48%; } }
+    @media (min-width: 768px) {
+      .main-slide-carousel__toggle {
+        right: 75px; } }
+    @media (min-width: 1024px) {
+      .main-slide-carousel__toggle {
+        right: 155px; } }
     .main-slide-carousel__toggle use {
       --fill-color: #e93350; }
     .main-slide-carousel__toggle:hover use {
