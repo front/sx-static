@@ -756,11 +756,11 @@ th {
   background: #e93350;
   color: #FFFFFF;
   font-weight: 400;
-  padding: 30px;
+  padding: 20px 30px 20px 30px;
   text-align: left; }
 
 td {
-  padding: 30px;
+  padding: 20px 30px 20px 30px;
   color: #2c3238;
   border-bottom: 1px solid #d1dbe6; }
 
