@@ -2418,7 +2418,7 @@ img.mfp-img {
       --fill-color: #2c3238; }
 
 .slick-arrow {
-  background: url(build/img/4319638ca2513e98a82643ae51ac72a0.svg) 0 0 no-repeat;
+  background: url(build/img/7cea0416b53d0eaf0edd9e01c6d822af.svg) 0 0 no-repeat;
   width: 29px;
   height: 20px;
   color: #000000;
@@ -3671,7 +3671,7 @@ header.dark {
   .search-post__excerpt {
     margin-top: 13px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: 30px;
     font-size: 1rem;
     letter-spacing: 0.02em;
     color: #333333; }
