@@ -1396,7 +1396,7 @@ footer {
   opacity: 0; }
 
 .wp-block-cloudblocks-accordion.save .accordion__item--open .accordion__item-toggle-button::after {
-  background-color: #926355;
+  background-color: #e93350;
   -webkit-transform: translateY(-50%) rotate(0);
           transform: translateY(-50%) rotate(0); }
 
