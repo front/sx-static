@@ -3152,6 +3152,8 @@ input {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .header-menu.main-menu .main-menu-items {
+    z-index: 6; }
   .header-menu.main-menu .language-selector {
     margin: 0 30px;
     color: #202124; }

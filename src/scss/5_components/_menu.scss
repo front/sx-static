@@ -37,6 +37,10 @@
       @extend .flex-ai-center;
     }
 
+    .main-menu-items {
+      z-index: 6;
+    }
+
     .language-selector {
       margin: 0 30px;
       color: $text-color;
