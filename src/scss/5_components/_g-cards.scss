@@ -59,6 +59,7 @@ $className: card;
 
     &:hover{
       background: $light-red;
+      border: 1px solid transparent;
 
       .#{$className}__title, .#{$className}__desc {
         color: #fff !important;

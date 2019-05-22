@@ -1549,7 +1549,8 @@ footer {
     transition: color 0.3s ease-in-out;
     margin-bottom: 0 !important; }
   .wp-block-starterx-cards .card:hover {
-    background: #e93350; }
+    background: #e93350;
+    border: 1px solid transparent; }
     .wp-block-starterx-cards .card:hover .card__title, .wp-block-starterx-cards .card:hover .card__desc {
       color: #fff !important; }
 
