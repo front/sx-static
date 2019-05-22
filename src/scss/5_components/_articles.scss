@@ -66,8 +66,8 @@
       align-items: flex-start;
     }
     &__img {
-      width: 100px;
-      height: 100px;
+      //width: 100px;
+      //height: 100px;
       object-fit: cover;
 
       @include rwd(tablet) {

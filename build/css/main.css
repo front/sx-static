@@ -936,8 +936,6 @@ td {
             -ms-flex-align: start;
                 align-items: flex-start; } }
     .articles .article__img {
-      width: 100px;
-      height: 100px;
       -o-object-fit: cover;
          object-fit: cover; }
       @media (min-width: 768px) {
@@ -2830,6 +2828,10 @@ img.mfp-img {
 .wp-block-starterx-employees {
   padding-left: 24px;
   padding-right: 24px; }
+  @media (min-width: 1024px) {
+    .wp-block-starterx-employees {
+      padding-left: 0;
+      padding-right: 0; } }
   .wp-block-starterx-employees .h1 {
     margin-top: 25px;
     margin-bottom: 25px; }
