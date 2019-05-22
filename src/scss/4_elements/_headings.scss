@@ -30,7 +30,7 @@ h6 {
 
 h1, .h1 {
   line-height: (51/38);
-  font-size: rem(20);
+  font-size: rem(25);
   @include rwd(tablet) {
     font-size: rem(32);
   }
