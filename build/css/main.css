@@ -1877,6 +1877,7 @@ footer {
     .fixed-bg__description p, .fixed-bg__description .edit-post-layout__content th, .edit-post-layout__content .fixed-bg__description th, .fixed-bg__description .edit-post-layout__content td, .edit-post-layout__content .fixed-bg__description td, .fixed-bg__description .edit-post-layout__content li, .edit-post-layout__content .fixed-bg__description li, .fixed-bg__description .edit-post-layout__content .wp-block-button__link, .edit-post-layout__content .fixed-bg__description .wp-block-button__link {
       margin: 0;
       padding: 0;
+      line-height: 1.35;
       font-size: inherit; }
     @media (min-width: 768px) {
       .fixed-bg__description {
