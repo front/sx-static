@@ -47,6 +47,10 @@
     text-decoration: none;
     flex-wrap: wrap;
 
+    &:hover {
+      background: $semi-white;
+    }
+
     &__icon{
       --fill-color: #8c959b;
       margin-bottom: 5px;
