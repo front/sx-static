@@ -76,7 +76,9 @@ $className: img-txt;
 
     &__text{
       align-self: center;
-    }
+      padding-left: 25px;
+      padding-right: 25px;
+  }
 
     &__title{
       margin-top: 0;
@@ -89,7 +91,7 @@ $className: img-txt;
     &__desc{
       font-weight: 500;
       font-size: 18px;
-      line-height: (29/18);
+      line-height: (40/18);
       color: #333333;
       margin-bottom: 35px;
     }

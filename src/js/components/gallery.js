@@ -63,7 +63,7 @@ class Gallery{
               $main_slider += `</ul></div>`;
             }
 
-            var toggle_button = `<div class="main-slide-carousel__toggle js-slide-toggle"><svg class="icon" width="24" height="24"><use xlink:href="/build/spritemap.svg#grid"></use></svg></div>`;
+            var toggle_button = `<div class="main-slide-carousel__toggle js-slide-toggle"><svg class="icon" width="24" height="24"><use xlink:href="build/spritemap.svg#grid"></use></svg></div>`;
 
             $(el).find('.mfp-container .mfp-content').html($main_slider);
             $(el).find('.mfp-container').append($thumbnails);

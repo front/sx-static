@@ -4,6 +4,7 @@ class Menu {
     this.mainNav = document.querySelectorAll('.main-nav .nav-columns')
     this.mobileNav = document.querySelectorAll('.nav-columns');
     this.submenu = document.querySelectorAll('.js-sub-menu');
+    this.menuWithSub = document.querySelectorAll('.js-menu-with-sub');
   }
 
   events() {
@@ -15,21 +16,31 @@ class Menu {
       });
     }
 
-
     if (this.submenu) {
+      let allMenuElement = this.menuWithSub[0];
+      let subMenu = this.submenu[0];
       for (let i = 0; i < this.submenu.length; i++) {
         let subMenu = this.submenu[i];
         let subMenuParent = subMenu.previousElementSibling;
         subMenuParent.classList.add('has-submenu');
-        subMenuParent.addEventListener('click', e => {
+        subMenuParent.addEventListener('mouseover', e => {
           e.preventDefault();
 
-          if( this.isHidden(subMenu) ) {
-            subMenu.style.display = 'block';
-            subMenuParent.classList.add('is-opened');
-          } else{
-            subMenu.style.display = 'none';
-            subMenuParent.classList.remove('is-opened');
+          subMenu.style.display = 'block';
+          subMenuParent.classList.add('is-opened');
+
+          if ( i > 0 ) {
+            subMenuParent.addEventListener('mouseleave', e => {
+              subMenu.style.display = 'none';
+            })
+
+            subMenu.addEventListener('mouseover', e => {
+              subMenu.style.display = 'block';
+            })
+
+            subMenu.addEventListener('mouseleave', e => {
+              subMenu.style.display = 'none';
+            })
           }
 
           let subMenuWidth = subMenu.offsetWidth;
@@ -39,6 +50,9 @@ class Menu {
           }
         })
       }
+      allMenuElement.addEventListener('mouseleave', e => {
+        subMenu.style.display = 'none';
+      })
     }
   }
 
@@ -52,11 +66,6 @@ class Menu {
         }
       })
     }
-  }
-
-  isHidden(el) {
-    var style = window.getComputedStyle(el);
-    return (style.display === 'none')
   }
 
   init() {
