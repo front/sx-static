@@ -615,9 +615,17 @@ img.mfp-img {
   }
 
   &__toggle{
+    @include rwdmax(tablet) {
+      right: 48%;
+    }
+    @include rwd(tablet) {
+      right: 75px;
+    }
+    @include rwd(medium) {
+      right: 155px;
+    }
     position: absolute;
     bottom: 60px;
-    right: 155px;
     width: 24px;
     height: 24px;
     cursor: pointer;
