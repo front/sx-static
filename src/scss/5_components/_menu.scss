@@ -4,7 +4,7 @@
     display: none;
     height: $top_menu_height;
     font-size: rem(13);
-    background: $gallery;
+    background: $light-gray;
 
     @include rwd(small) {
       display: block;
