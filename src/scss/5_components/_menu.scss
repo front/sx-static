@@ -264,7 +264,7 @@
       }
 
       &#middle {
-        stroke-dasharray: 240px 240px;
+        opacity: 1;
       }
     }
 
@@ -288,8 +288,7 @@
           }
 
           &#middle {
-            stroke-dashoffset: -115px;
-            stroke-dasharray: 1px 220px;
+            opacity: 0;
           }
         }
       }
@@ -557,4 +556,8 @@ header.dark {
       }
     }
   }
+}
+
+.has-submenu {
+  cursor: default;
 }
