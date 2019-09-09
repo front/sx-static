@@ -1,19 +1,18 @@
 $className: newsletter;
 
 .wp-block-newsletter{
-  background: #000;
+  background: $dark-gray;
+  color: $romance;
 
   .#{$className}{
 
     &__title{
-      color: #fff;
       margin-top: 0;
       padding-top: 0;
       margin-bottom: 10px;
     }
 
     &__desc{
-      color: #fff;
       p{
         font-weight: 500;
         font-size: 14px;
@@ -43,7 +42,6 @@ $className: newsletter;
       grid-column-gap: 20px;
       grid-row-gap: 20px;
       margin-top: 25px;
-      color: #fff;
       font-weight: 500;
       font-size: 14px;
       line-height: (19/14);
@@ -104,37 +102,12 @@ $className: newsletter;
 
   &--white {
     background: #fff;
-    .#{$className} {
-      &__title {
-        color: #000;
-      }
-
-      &__desc {
-        color: #000;
-      }
-
-      &__additional{
-        color: #000;
-      }
-    }
+    color: $text-color;
   }
 
   &--colored{
-    background: $brandy-rose;
-
-    .#{$className} {
-      &__title {
-        color: #000;
-      }
-
-      &__desc {
-        color: #000;
-      }
-
-      &__additional {
-        color: #000;
-      }
-    }
+    background: $light-red;
+    color: $romance;
   }
 
   &--border{

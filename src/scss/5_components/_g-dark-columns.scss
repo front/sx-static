@@ -110,6 +110,10 @@ $item: dark-item;
       z-index: 2;
       background: rgba(#000, 0.5);
     }
+
+    &__arrow{
+      --fill-color: #fff;
+    }
   }
 
   .row {
