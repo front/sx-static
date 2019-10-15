@@ -1,7 +1,0 @@
-import './scss/main.scss';
-import './js';
-
-function requireAll(r) {
-  r.keys().forEach(r);
-}
-requireAll(require.context('icons/', true, /\.svg$/));

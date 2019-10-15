@@ -1,9 +1,0 @@
-/**
- * Remove border from focused elements in a form
- */
-
-form {
-  *:focus {
-    outline: none;
-  }
-}
