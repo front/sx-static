@@ -1,8 +1,9 @@
 {
-  "name": "frontend-starter",
+  "name": "sx-static",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "git@github.com:front/frontend-starter.git",
+  "repository": "git@github.com:front/sx-static.git",
+  "homepage": "https://front/github.io/sx-static/",
   "author": "Foad Yousefi <foad@front.no>",
   "license": "MIT",
   "private": true,
@@ -12,7 +13,9 @@
     "dev:lose": "yarn dev --watch-aggregate-timeout 300 --watch-poll 500",
     "build": "webpack --run-prod",
     "lint:js": "eslint src",
-    "lint:css": "stylelint src/css"
+    "lint:css": "stylelint src/css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.5",
