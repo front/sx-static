@@ -17,7 +17,7 @@ const generateHTMLPlugins = () =>
   glob.sync('./src/prototype/*.?(twig|html)').map(
     dir => (dir) ?
         new HTMLWebpackPlugin({
-          filename: './prototype/' + path.basename(dir.replace('.twig', '.html')), // Output
+          filename: './' + path.basename(dir.replace('.twig', '.html')), // Output
           template: dir, // Input
         }) : null
   );
