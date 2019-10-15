@@ -8,6 +8,20 @@ const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const glob = require('glob');
+
+const generateHTMLPlugins = () =>
+  glob.sync('./src/prototype/*.?(twig|html)').map(
+    dir => (dir) ?
+        new HTMLWebpackPlugin({
+          filename: './prototype/' + path.basename(dir.replace('.twig', '.html')), // Output
+          template: dir, // Input
+        }) : null
+  );
+
 module.exports = {
   node: {
     fs: 'empty',
@@ -18,7 +32,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'js/main.js',
-    publicPath: 'build/',
+    // publicPath: '../build/',
   },
 
   externals: {
@@ -81,6 +95,23 @@ module.exports = {
           }
         ],
       },
+      {
+        test: /\.(twig|html)$/,
+        use: [
+          'raw-loader',
+          {
+            loader: 'twig-html-loader',
+            options: {
+              root: path.resolve(__dirname, 'src/prototype'),
+              namespaces: {
+                'layouts': path.join(__dirname, 'src', 'prototype', 'layouts'),
+                'components': path.join(__dirname, 'src', 'prototype', 'components'),
+              },
+              data: { }
+            }
+          },
+        ],
+      },
       // {
       //   test: /\.svg$/,
       //   include: path.resolve(__dirname, 'src/icons'),
@@ -114,12 +145,22 @@ module.exports = {
       },
       styles: path.join(__dirname, 'src/scss/_sprites.scss')
     }),
+    ...generateHTMLPlugins(),
     new BrowserSyncPlugin({
       // BrowserSync options
       host: 'localhost',
       port: 3000,
-      proxy: 'starterx-static.localhost',
-      open: false,
+      server: {
+        baseDir: ['build']
+      },
+      open: true,
+      browser: 'google chrome'
     }),
+    new CopyWebpackPlugin([
+      {
+        from: './img',
+        to: 'img'
+      }
+    ])
   ],
 };
