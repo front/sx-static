@@ -21,3 +21,6 @@ assets/
 
 ## Local configurations
 local-config.json
+
+### build directory
+build/
