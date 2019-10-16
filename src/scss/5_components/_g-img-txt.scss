@@ -90,8 +90,8 @@ $className: img-txt;
 
     &__desc{
       font-weight: 500;
-      font-size: 18px;
-      line-height: (40/18);
+      font-size: rem(18);
+      line-height: (32/18);
       color: #333333;
       margin-bottom: 35px;
     }
