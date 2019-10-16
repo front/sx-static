@@ -1,0 +1,79 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area container">
+    <main id="main" class="site-main" role="main">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">home</a>
+        </li>
+        <li class="breadcrumbs__item">blog</li>
+      </ul>
+
+      <header class="entry-header">
+        <h1 class="entry-title title title--page">Blog</h1>
+      </header><!-- .entry-header -->
+
+      <hr class="wp-block-separator is-style-wide">
+
+      <div class="content content--with-sidebar">
+        <div class="content__left entry-content">
+          <div class="articles articles--one-col">
+            {% set articles = [
+              {
+                "img": "blog-article-list-with-side-bar/Rectangle2.11.jpg",
+                "title": "Coal a combustible sedimentary rock formed in coal seams",
+                "author": "JOHN DOE",
+                "category": "Coal",
+                "date": "FEBRUARY 18, 2019",
+                "excerpt": "Are we in agreeance programmatically we want to empower the team with the right tools and guidance to uplevel our craft and build better yet ladder up / ladder back to the strategy what about scaling components to a global audience? are there any leftovers in the kitchen?."
+              },
+              {
+                "img": "blog-article-list-with-side-bar/Rectangle2.29.jpg",
+                "title": "One line title #1",
+                "author": "JOHN DOE",
+                "category": "Coal",
+                "date": "FEBRUARY 18, 2019",
+                "excerpt": "Are we in agreeance programmatically we want to empower the team with the right tools and guidance to uplevel our craft and build better yet ladder up / ladder back to the strategy what about scaling components to a global audience? are there any leftovers in the kitchen?."
+              },
+              {
+                "img": "blog-article-list-with-side-bar/Rectangle2.31.jpg",
+                "title": "One line title #1",
+                "author": "JOHN DOE",
+                "category": "Coal",
+                "date": "FEBRUARY 18, 2019",
+                "excerpt": "Are we in agreeance programmatically we want to empower the team with the right tools and guidance to uplevel our craft and build better yet ladder up / ladder back to the strategy what about scaling components to a global audience? are there any leftovers in the kitchen?."
+              },
+              ] %}
+            {% for article in articles %}
+              {% include "teasers/article-teaser.twig" with article %}
+            {% endfor %}
+          </div>
+          {% include "components/pagination.twig" %}
+        </div><!-- .entry-content -->
+        <div class="content__right sidebar">
+          <div class="tag-cloud-links">
+            <div class="tag-cloud-links__title">
+              Tags
+            </div>
+            <div class="tag-cloud-links__items">
+              {% set buttons = [
+                { "text": "Coal" },
+                { "text": "Nature" },
+                { "text": "Photography" },
+                { "text": "rocks-gems-dark" },
+                { "text": "black&white" },
+                { "text": "people" },
+                ] %}
+              {% for btn in buttons %}
+                {% include "blocks/buttons/btn-tag.twig" with card %}
+              {% endfor %}
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+  
+{% endblock %}
