@@ -3279,7 +3279,8 @@ input {
           background: #f3f6f8; }
     .header-menu .menu-item > li a {
       color: #202124;
-      text-decoration: none; }
+      text-decoration: none;
+      cursor: pointer; }
       .header-menu .menu-item > li a span {
         position: relative; }
       .header-menu .menu-item > li a:hover svg {
