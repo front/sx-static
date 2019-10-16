@@ -1,0 +1,26 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+      <section class="error-404 not-found">
+        <div class="error-404__item error-404__img-wrapper">
+          <img class="error-404__img" src="img/404/image.jpg" alt="404 image">
+        </div>
+        <div class="error-404__item error-404__title">
+          404
+        </div>
+        <div class="error-404__item error-404__subtitle">
+          Page not found
+        </div>
+        <div class="error-404__item">
+          <a class="error-404__button btn" href="/">
+            Go to homepage
+          </a>
+        </div>
+      </section><!-- .error-404 -->
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
