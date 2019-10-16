@@ -13,3 +13,17 @@ REM
 
   @return $pixels / $context * 1rem;
 }
+
+@function rem-calc($values, $base-value: $base-font-size) {
+  $length: length($values);
+
+  @if $length == 1 {
+    @return rem(nth($values, 1), $base-value);
+  }
+
+  $remValues: ();
+  @for $i from 1 through $length {
+    $remValues: append($remValues, rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
