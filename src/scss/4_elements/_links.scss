@@ -2,7 +2,7 @@
 a
 a:hover
  */
-a:not(.ab-item),
+a:not(.ab-item):not(.social-menu__item),
 .link {
   text-decoration: underline;
   position: relative;
@@ -29,5 +29,11 @@ a:not(.ab-item),
   span.active:before {
     visibility: visible;
     transform: scaleX(1);
+  }
+}
+
+.social-menu__item {
+  span img:hover {
+    filter: brightness(1.2);
   }
 }
