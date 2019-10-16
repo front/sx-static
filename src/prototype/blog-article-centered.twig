@@ -142,24 +142,18 @@
                 Tags
               </div>
               <div class="tag-cloud-links__items tag-cloud-links__items--centered">
-                <a href="#" class="btn tag-cloud-link">
-                  Coal
-                </a>
-                <a href="#" class="btn tag-cloud-link">
-                  nature
-                </a>
-                <a href="#" class="btn tag-cloud-link">
-                  photography
-                </a>
-                <a href="#" class="btn tag-cloud-link">
-                  rocks-gems-dark
-                </a>
-                <a href="#" class="btn tag-cloud-link">
-                  black&white
-                </a>
-                <a href="#" class="btn tag-cloud-link">
-                  people
-                </a>
+                {% set buttons = [
+                  { "text": "Coal" },
+                  { "text": "Nature" },
+                  { "text": "Photography" },
+                  { "text": "rocks-gems-dark" },
+                  { "text": "black&white" },
+                  { "text": "people" },
+                  ] %}
+                {% for btn in buttons %}
+                  {% include "blocks/buttons/btn-tag.twig" with card %}
+                {% endfor %}
+                
               </div>
             </div>
 
