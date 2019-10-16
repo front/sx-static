@@ -32,7 +32,8 @@
     color: #333333;
     margin-bottom: $space;
   }
-  &__img {
+  &__img,
+  .wp-block-image {
     &--section {
       @include rwd(mobile) {
         display: flex;
@@ -42,11 +43,13 @@
       max-width: 100%;
       margin-bottom: 10px;
     }
-    &__desc {
+    &__desc,
+    figcaption {
       font-style: normal;
       font-weight: 500;
       line-height: 19px;
       font-size: rem(12);
+      margin-top: 0;
       margin-bottom: $space;
       @include rwd(medium) {
         line-height: 21px;
