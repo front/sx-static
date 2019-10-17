@@ -189,23 +189,27 @@
                 {% set relatedArticles = [
                   {
                     "img": "blog-article-fullwidth/Rectangle2.3.jpg",
-                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams."
+                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams.",
+                    "centered": true
                   },
                   {
                     "img": "blog-article-fullwidth/Rectangle2.4.jpg",
-                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata."
+                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata.",
+                    "centered": true
                   },
                   {
                     "img": "blog-article-fullwidth/Rectangle2.5.jpg",
-                    "title": "Coal is a combustible black or brownish-black sedimentary rock."
+                    "title": "Coal is a combustible black or brownish-black sedimentary rock.",
+                    "centered": true
                   },
                   {
                     "img": "blog-article-fullwidth/Rectangle2.6.jpg",
-                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams"
+                    "title": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams",
+                    "centered": true
                   },
                   ] %}
                 {% for article in relatedArticles %}
-                  {% include "blocks/related-articles.twig" with card %}
+                  {% include "blocks/related-articles.twig" with article %}
                 {% endfor %}
                 
               </div>

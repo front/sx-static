@@ -5,18 +5,23 @@
   }
   &--with-sidebar {
     display: flex;
+    flex-wrap: wrap;
+
     & .content {
       &__left {
         max-width: 100%;
         @include rwd(medium) {
-          width: 76%;
+          width: 75%;
         }
       }
       &__right {
-        display: none;
+        // display: none;
+        width: 100%;
+        max-width: 100%;
+
         @include rwd(medium) {
           display: block;
-          width: 24%;
+          width: 19%;
           padding-left: 77px;
           position: relative;
 
@@ -28,6 +33,11 @@
             width: 1px;
             height: calc(100% - #{$margin_bottom_single_article});
             background: $semi-white;
+          }
+
+          .sidebar__sticky {
+            position: sticky;
+            top: 30px;
           }
         }
       }
