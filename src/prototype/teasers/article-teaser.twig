@@ -1,22 +1,22 @@
-
-<div class="articles__item">
-  <div class="article">
-    <img class="article__img" src="./img/{{ article.img }}" alt="article img">
-    <div class="article__info">
-      <hr class="wp-block-separator is-short no-margin-top no-margin-left">
-      <div class="article__info__tag">
-        <a href="#">{{ article.category }}</a>
-      </div>
-      <a href="#" class="article__info__title">{{ article.title }}</a>
-      <div class="article__info__credits">
-        by
-        <span class="article__info__author">{{ article.author }}</span>
-        |
-        <span class="article__info__date">{{ article.date }}</span>
-      </div>
-      <div class="article__info__content">
-        {{ article.excerpt }}
-      </div>
+<article class="article">
+  <img class="article__img" src="./img/{{ article.img }}" alt="article img">
+  <div class="article__header">
+    <hr class="wp-block-separator is-short no-margin-top no-margin-left">
+    <div class="article__header__tag">
+      <a href="#">{{ article.category }}</a>
     </div>
+
+    <a href="#" class="article__header__title">
+      <h1>{{ article.title }}</h1>
+    </a>
+    
+    <div class="article__header__credits">
+      by
+      <span class="article__header__author">{{ article.author }}</span>
+      |
+      <span class="article__header__date">{{ article.date }}</span>
+    </div>
+
   </div>
-</div>
+  <p class="article__content">{{ article.excerpt }}</p>
+</article>
