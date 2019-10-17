@@ -1,6 +1,11 @@
 <div class="related-articles__item">
-    <img src="./img/{{ article.img }}" alt="coal">
-    <div class="related-articles__item__title text-center">
+  <img src="./img/{{ article.img }}" alt="coal">
+  <div class="related-articles__text">
+    {% if article.date %} 
+      <div class="related-articles__date">{{ article.date }}</div>
+    {% endif %}
+    <div class="related-articles__item__title {% if article.centered %}text-center{% endif %}">
       {{ article.title }}
     </div>
   </div>
+</div>
