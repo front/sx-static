@@ -21,9 +21,10 @@
 
         @include rwd(medium) {
           display: block;
-          width: 19%;
-          padding-left: 77px;
+          width: 25%;
+          padding-left: 40px;
           position: relative;
+          box-sizing: border-box;
 
           &:before{
             content: '';
@@ -31,7 +32,7 @@
             top: 0;
             left: 0;
             width: 1px;
-            height: calc(100% - #{$margin_bottom_single_article});
+            height: calc(100% + ( #{$margin_bottom_single_article} * 3 ));
             background: $semi-white;
           }
 
@@ -48,6 +49,12 @@
     position: relative;
     & .sidebar {
       margin-top: 20px;
+      border-bottom: 1px dashed #d1dbe6;
+      padding-bottom: 20px;
+
+      @include rwd(medium) {
+        border-bottom: none;
+      }
     }
   }
 

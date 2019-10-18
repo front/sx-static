@@ -9,14 +9,14 @@
 
 .entry-content {
   max-width: $content-width-wide;
-  margin: 0 auto $margin_bottom_single_article/2 auto;
 
+  
   .article{
     margin-bottom: 0;
-  }
 
-  @include rwd(medium){
-    margin: 0 auto $margin_bottom_single_article auto;
+    @include rwd(medium) {
+      border-bottom: 1px dashed #d1dbe6;
+    }
   }
 
   .h1 {
