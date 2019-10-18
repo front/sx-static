@@ -824,10 +824,17 @@ td {
     .article .wp-block-image--section {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex; }
+      .article__img--section figure:first-child,
+      .article .wp-block-image--section figure:first-child {
+        padding-right: 25px; }
+      .article__img--section figure:last-child,
+      .article .wp-block-image--section figure:last-child {
+        padding-left: 25px; } }
   .article__img img,
   .article .wp-block-image img {
     max-width: 100%;
+    width: 100%;
     margin-bottom: 10px; }
   .article__img__desc,
   .article__img figcaption,
@@ -1138,16 +1145,18 @@ td {
       @media (min-width: 1024px) {
         .content--with-sidebar .content__right {
           display: block;
-          width: 19%;
-          padding-left: 77px;
-          position: relative; }
+          width: 25%;
+          padding-left: 40px;
+          position: relative;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box; }
           .content--with-sidebar .content__right:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 1px;
-            height: calc(100% - 150px);
+            height: calc(100% + ( 150px * 3 ));
             background: #d1dbe6; }
           .content--with-sidebar .content__right .sidebar__sticky {
             position: -webkit-sticky;
@@ -1157,7 +1166,12 @@ td {
     margin-top: 20px;
     position: relative; }
     .content--article .sidebar {
-      margin-top: 20px; }
+      margin-top: 20px;
+      border-bottom: 1px dashed #d1dbe6;
+      padding-bottom: 20px; }
+      @media (min-width: 1024px) {
+        .content--article .sidebar {
+          border-bottom: none; } }
   .content__share {
     width: 100px;
     margin-right: 132px;
@@ -1177,13 +1191,12 @@ td {
       margin-top: 40px; } }
 
 .entry-content {
-  max-width: 1376px;
-  margin: 0 auto 75px auto; }
+  max-width: 1376px; }
   .entry-content .article {
     margin-bottom: 0; }
-  @media (min-width: 1024px) {
-    .entry-content {
-      margin: 0 auto 150px auto; } }
+    @media (min-width: 1024px) {
+      .entry-content .article {
+        border-bottom: 1px dashed #d1dbe6; } }
   .entry-content .h1 {
     margin-top: 35px;
     margin-bottom: 0; }
@@ -1715,15 +1728,15 @@ footer {
     -ms-flex-item-align: center;
         align-self: center;
     padding: 30px; }
-  .wp-block-cloudblocks-factbox .factbox__desc {
+  .wp-block-cloudblocks-factbox .factbox p, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content th, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox th, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content td, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox td, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content li, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox li, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content .wp-block-button__link, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox .wp-block-button__link {
     margin-top: 20px;
-    font-size: 16px; }
-    .wp-block-cloudblocks-factbox .factbox__desc p, .wp-block-cloudblocks-factbox .factbox__desc .edit-post-layout__content th, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox__desc th, .wp-block-cloudblocks-factbox .factbox__desc .edit-post-layout__content td, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox__desc td, .wp-block-cloudblocks-factbox .factbox__desc .edit-post-layout__content li, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox__desc li, .wp-block-cloudblocks-factbox .factbox__desc .edit-post-layout__content .wp-block-button__link, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox__desc .wp-block-button__link {
-      margin: 0;
-      padding: 0;
-      font-size: inherit; }
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    line-height: 1.5; }
     @media (min-width: 768px) {
-      .wp-block-cloudblocks-factbox .factbox__desc {
+      .wp-block-cloudblocks-factbox .factbox p, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content th, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox th, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content td, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox td, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content li, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox li, .wp-block-cloudblocks-factbox .factbox .edit-post-layout__content .wp-block-button__link, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox .wp-block-button__link {
         margin-top: 40px;
         font-size: 1.33333rem; } }
   @media (max-width: 1025px) {
@@ -1731,17 +1744,22 @@ footer {
       background: none !important; } }
   @media (min-width: 1024px) {
     .wp-block-cloudblocks-factbox .factbox__image {
-      height: 100%; }
-    .wp-block-cloudblocks-factbox .factbox__icon {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       height: 100%;
-      padding-bottom: 0; }
+      padding: 0 !important; }
+    .wp-block-cloudblocks-factbox .factbox__icon {
+      padding-bottom: 0;
+      top: 50%;
+      position: relative;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
       .wp-block-cloudblocks-factbox .factbox__icon img {
-        display: none; }
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
     .wp-block-cloudblocks-factbox .factbox__text {
-      padding: 6.77083vw 4.6875vw; } }
+      padding: 6.77083vw 4.6875vw; }
+      .wp-block-cloudblocks-factbox .factbox__text h1, .wp-block-cloudblocks-factbox .factbox__text .edit-post-layout__content #post-title-0, .edit-post-layout__content .wp-block-cloudblocks-factbox .factbox__text #post-title-0 {
+        margin-top: 0; } }
 
 .wp-block-cloudblocks-factbox .row {
   display: -webkit-box;
@@ -2820,6 +2838,8 @@ img.mfp-img {
   .wp-block-starterx-employees .h1 {
     margin-top: 25px;
     margin-bottom: 25px; }
+  .wp-block-starterx-employees .employee__image img {
+    display: block; }
 
 .wp-block-gallery {
   padding: 0 25px; }
@@ -3588,6 +3608,9 @@ header.dark {
 .related-articles {
   margin-top: 53px;
   margin-bottom: 40px; }
+  @media (min-width: 1024px) {
+    .related-articles {
+      max-width: calc(75% - 60px); } }
   .related-articles__title {
     font-family: Poppins;
     font-style: normal;
