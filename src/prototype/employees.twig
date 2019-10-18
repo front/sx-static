@@ -1,0 +1,58 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div class="container">
+
+        <div class="wp-block-starterx-employees alignwide">
+
+          <h1 class="h1">Team/employees</h1>
+          <div class="row columns-4">
+            {% set employees = [
+              {
+                img: "employee/Rectangle2.3.jpg",
+                name: "John Doe",
+                title: "CEO",
+                email: "john@doe.com",
+                phone: "123 45 6789",
+              } ,
+              {
+                img: "employee/Rectangle2.4.jpg",
+                name: "Kari Nordmann",
+                title: "CTO",
+                email: "kari@nordmann.no",
+                phone: "987 65 432",
+              } ,
+              {
+                img: "employee/Rectangle2.5.jpg",
+                name: "Ola Nordmann",
+                title: "Senior Developer",
+                email: "ola@nordmann.no",
+                phone: "123 98 732",
+              } ,
+              {
+                img: "employee/Rectangle2.6.jpg",
+                name: "John ola Doe",
+                title: "HR manager",
+                email: "john@nordmann.no",
+                phone: "000 00 000",
+              } ,
+            ] %}
+            {% for employee in employees %}
+              {% include "blocks/employee.twig" with employee %}
+            {% endfor %}
+            
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+      </div>
+
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
