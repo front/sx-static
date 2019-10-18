@@ -1,0 +1,40 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div class="container">
+        <br>
+
+        <h1>Card</h1>
+
+        <div class="wp-block-starterx-cards alignwide">
+          <div class="row columns-3">
+            {% set cards = [
+              {
+                "img": "card/Rectangle2.4.jpg",
+                "title": "One line title #1"
+              },
+              {
+                "img": "card/Rectangle2.6.jpg",
+                "title": "One line title #2"
+              },
+              {
+                "img": "card/Rectangle2.8.jpg",
+                "title": "One line title #3"
+              },
+              ] %}
+            {% for card in cards %}
+              {% include "blocks/cards/card-border.twig" with card %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+      </div>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
