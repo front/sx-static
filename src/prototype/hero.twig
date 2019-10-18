@@ -1,0 +1,22 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+        {% include "blocks/hero/hero-left.twig" with {
+          img: "hero/asian-food-bowl-cuisine-699953.jpg",
+          title: "Starter theme, the buiding blocks for a<br>unique and professional website.",
+          desc: 'Build a unique website by selecting and customizing blocks. Pick blocks from a <a href="http://#" style="color:#e93350; text-decoration: underline;">repository</a> and make them your own.',
+          cta: {
+            link: "https://github.com/front/gutenberg-js",
+            txt: "The starter theme"
+          }
+        } %}
+        
+
+      <br><br><br>
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
