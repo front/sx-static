@@ -30,15 +30,11 @@
               uplevel our craft and build better yet ladder up / ladder back to the strategy what about scaling
               components to a global audience? are there any leftovers in the kitchen?.
             </div>
-            <div class="article__img">
-              <img src="./img/blog-article-right-column/Rectangle2.jpg" alt="coal">
-              <div class="article__img__desc">
-                Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams.
-                Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and
-                nitrogen. Coal is formed if dead plant matter decays into peat and over millions of years the heat and
-                pressure of deep burial converts the peat into coal.
-              </div>
-            </div>
+            {% set figure = {
+              "src": "blog-article-right-column/Rectangle2.jpg",
+              "caption": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and  nitrogen. Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."
+            } %}
+            {% include "blocks/figure.twig" with figure %}
             <div class="article__text">
               Anti-pattern. Baseline the procedure and samepage your department pixel pushing can I just chime in on
               that one, so face time, and we need to harvest synergy effects nor drill down, and sacred cow. Gain
@@ -53,21 +49,19 @@
               new economy. Quarterly sales are at an all-time low design thinking. Blue money time vampire yet we need
               to start advertising on social media.
             </div>
+            
             <div class="article__img--section">
-              <div class="article__img article__img--half">
-                <img src="./img/blog-article-right-column/Rectangle2.1.jpg" alt="coal">
-                <div class="article__img__desc">
-                  Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal
-                  seams.
-                </div>
-              </div>
-              <div class="article__img article__img--half">
-                <img src="./img/blog-article-right-column/Rectangle2.2.jpg" alt="coal">
-                <div class="article__img__desc">
-                  Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal
-                  seams.
-                </div>
-              </div>
+              {% set figure = {
+                "src": "blog-article-right-column/Rectangle2.1.jpg",
+                "caption": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams."
+              } %}
+              {% include "blocks/figure.twig" with figure %}
+
+              {% set figure = {
+                "src": "blog-article-right-column/Rectangle2.2.jpg",
+                "caption": "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams."
+              } %}
+              {% include "blocks/figure.twig" with figure %}
             </div>
 
             <div class="article__text">

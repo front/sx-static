@@ -37,10 +37,19 @@
     &--section {
       @include rwd(mobile) {
         display: flex;
+
+        figure:first-child {
+          padding-right: 25px;
+        }
+
+        figure:last-child {
+          padding-left: 25px;
+        }
       }
     }
     & img {
       max-width: 100%;
+      width: 100%;
       margin-bottom: 10px;
     }
     &__desc,
