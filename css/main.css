@@ -2436,10 +2436,8 @@ img.mfp-img {
       --fill-color: #2c3238; }
 
 .slick-arrow {
-  background: url(img/7cea0416b53d0eaf0edd9e01c6d822af.svg) 0 0 no-repeat;
   width: 29px;
   height: 20px;
-  color: #000000;
   border: none;
   font-size: 0;
   position: absolute;
@@ -2448,14 +2446,22 @@ img.mfp-img {
           transform: translateY(-50%);
   z-index: 5;
   outline: 0 !important; }
-  .slick-arrow:hover {
-    color: #e93350; }
+  .slick-arrow:before {
+    font-size: 2rem;
+    color: #ABABAB; }
+  .slick-arrow:hover:before {
+    color: #e93350;
+    cursor: pointer; }
 
 .slick-prev {
   left: 0; }
+  .slick-prev:before {
+    content: "\276E"; }
 
 .slick-next {
   right: 0; }
+  .slick-next:before {
+    content: "\276F"; }
 
 .wp-block-cloudblocks-hero-section main h1, .wp-block-cloudblocks-hero-section main .edit-post-layout__content #post-title-0, .edit-post-layout__content .wp-block-cloudblocks-hero-section main #post-title-0, .wp-block-cloudblocks-hero-section main h2, .wp-block-cloudblocks-hero-section main h3 {
   line-height: 1.4; }
