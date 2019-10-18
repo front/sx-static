@@ -1,0 +1,11 @@
+<li class="blocks-gallery-item">
+  <figure>
+    <a href="img/{{ img.src }}">
+      <img src="img/{{ img.src }}" {% if img.caption %}alt="{{ img.caption }}"{% endif %}
+      >
+    </a>
+    {% if img.caption %}
+      <figcaption>{{ img.caption }}</figcaption>
+    {% endif %}
+  </figure>
+</li>

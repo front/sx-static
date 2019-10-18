@@ -1,0 +1,67 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div class="container">
+
+        <div class="entry-content">
+
+          <h1>Gallery</h1>
+
+          <ul class="wp-block-gallery columns-2 is-cropped">
+            {% set gallery = [
+              {
+                src: "gallery/Rectangle3.1.jpg",
+                caption: "Suspendisse enim turpis dictum sed"
+              },
+              {
+                src: "gallery/Rectangle2.7.jpg",
+                caption: "Donec pede justo fringilla vel"
+              }
+            ] %}
+            {% for img in gallery %}
+              {% include "blocks/gallery-item.twig" with img %}
+            {% endfor %}
+          </ul>
+
+          <ul class="wp-block-gallery columns-3 is-cropped">
+            {% set gallery = [
+              {
+                src: "gallery/Rectangle3.jpg",
+                caption: "Suspendisse enim turpis dictum sed"
+              },
+              {
+                src: "gallery/Rectangle2.1.jpg",
+                caption: "Donec pede justo fringilla vel"
+              },
+              {
+                src: "gallery/Rectangle2.2.jpg",
+                caption: "Phasellus leo dolor tempus non"
+              },
+            ] %}
+            {% for img in gallery %}
+              {% include "blocks/gallery-item.twig" with img %}
+            {% endfor %}
+          </ul>
+
+
+          <ul class="wp-block-gallery columns-4 is-cropped">
+            {% set gallery = [
+              { src: "gallery/Rectangle2.3.jpg" },
+              { src: "gallery/Rectangle2.4.jpg" },
+              { src: "gallery/Rectangle2.5.jpg" },
+              { src: "gallery/Rectangle2.6.jpg" },
+            ] %}
+            {% for img in gallery %}
+              {% include "blocks/gallery-item.twig" with img %}
+            {% endfor %}
+          </ul>
+
+
+        </div>
+
+      </div>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
