@@ -4,79 +4,73 @@
   <div id="content" class="site-content">
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">
-        
-        <div class="entry-content">
+        <div class="container">
+          <h1>Block title on three columns grid</h1>
+        </div>
 
-          <div class="container">
-            <h1>Block title on three columns grid</h1>
-          </div>
+        <section class="wp-block-cloudblocks-content-in-columns columns-3">
+          {% set cards = [
+            {
+              "img": "content-in-columns/Rectangle2.1.jpg",
+              "title": "One line title #1",
+              "align": "left"
+            },
+            {
+              "img": "content-in-columns/Rectangle2.2.jpg",
+              "title": "One line title #2",
+              "align": "left"
+            },
+            {
+              "img": "content-in-columns/Rectangle3.jpg",
+              "title": "One line title #3",
+              "align": "left"
+            },
+            ] %}
+          {% for card in cards %}
+            {% include "blocks/cards/card-simple.twig" with card %}
+          {% endfor %}
+          
+        </section>
 
-          <section class="wp-block-cloudblocks-content-in-columns columns-3">
+        <br><br><br>
+
+        <div class="container" style="display: flex; justify-content: space-between">
+          <h1 style="padding-right: 5px">4 columns center text</h1>
+          <h1 style="padding-left: 5px">4 columns left align text</h1>
+        </div>
+
+        <section class="wp-block-cloudblocks-content-in-columns columns-4">
             {% set cards = [
               {
-                "img": "content-in-columns/Rectangle2.1.jpg",
+                "img": "content-in-columns/Rectangle2.3.jpg",
                 "title": "One line title #1",
-                "align": "left"
+                "align": "center"
               },
               {
-                "img": "content-in-columns/Rectangle2.2.jpg",
+                "img": "content-in-columns/Rectangle2.5.jpg",
                 "title": "One line title #2",
                 "align": "left"
               },
               {
-                "img": "content-in-columns/Rectangle3.jpg",
+                "img": "content-in-columns/Rectangle2.6.jpg",
                 "title": "One line title #3",
+                "align": "left"
+              },
+              {
+                "img": "content-in-columns/Rectangle2.7.jpg",
+                "title": "One line title #4",
                 "align": "left"
               },
               ] %}
             {% for card in cards %}
               {% include "blocks/cards/card-simple.twig" with card %}
             {% endfor %}
-            
-          </section>
+        </section>
 
-          <br><br><br>
-
-          <div class="container" style="display: flex; justify-content: space-between">
-            <h1 style="padding-right: 5px">4 columns center text</h1>
-            <h1 style="padding-left: 5px">4 columns left align text</h1>
-          </div>
-
-          <section class="wp-block-cloudblocks-content-in-columns columns-4">
-              {% set cards = [
-                {
-                  "img": "content-in-columns/Rectangle2.3.jpg",
-                  "title": "One line title #1",
-                  "align": "center"
-                },
-                {
-                  "img": "content-in-columns/Rectangle2.5.jpg",
-                  "title": "One line title #2",
-                  "align": "left"
-                },
-                {
-                  "img": "content-in-columns/Rectangle2.6.jpg",
-                  "title": "One line title #3",
-                  "align": "left"
-                },
-                {
-                  "img": "content-in-columns/Rectangle2.7.jpg",
-                  "title": "One line title #4",
-                  "align": "left"
-                },
-                ] %}
-              {% for card in cards %}
-                {% include "blocks/cards/card-simple.twig" with card %}
-              {% endfor %}
-          </section>
-
-          <br>
-          <br>
-          <br>
-
-        </div>
-
-
+        <br>
+        <br>
+        <br>
+        
       </main><!-- #main -->
     </div><!-- #primary -->
   </div><!-- #content -->
