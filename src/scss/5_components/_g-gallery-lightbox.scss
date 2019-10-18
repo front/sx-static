@@ -645,10 +645,8 @@ img.mfp-img {
 }
 
 .slick-arrow {
-  background: url(../icons/search-arrow.svg) 0 0 no-repeat;
   width: 29px;
   height: 20px;
-  color: $black;
   border: none;
   font-size: 0;
   position: absolute;
@@ -656,17 +654,33 @@ img.mfp-img {
   transform: translateY(-50%);
   z-index: 5;
   outline: 0 !important;
-
-  &:hover {
-    color: $light-red;
+  
+  &:before {
+    font-size: 2rem;
+    color: $gray-color;
   }
+
+  &:hover:before {
+    color: $light-red;
+    cursor: pointer;
+  }
+  
+
 }
 
 
 .slick-prev {
   left: 0;
+
+  &:before {
+    content: "\276E";
+  }
 }
 
 .slick-next {
   right: 0;
+
+  &:before {
+    content: "\276F";
+  }
 }
