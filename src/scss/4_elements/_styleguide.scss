@@ -1,0 +1,40 @@
+.styleguide-section-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-bottom: 1px solid #e5e3e3;
+}
+
+.styleguide-actions {
+  display: flex;
+
+  .view-code,
+  .view-on-github {
+    cursor: pointer;
+    margin-left: 20px;
+    
+
+    &:hover {
+      svg path {
+        fill: $light-red;
+      }
+    }
+  }
+
+  :first-child {
+    margin-left: auto;
+  }
+}
+
+.styleguide-code {
+  display: none;
+
+  pre {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  code {
+    white-space: pre-wrap;
+  }
+}

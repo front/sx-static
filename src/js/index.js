@@ -9,6 +9,7 @@ import Search from './components/search';
 import Accordion from './components/accordion';
 import AlignFull from './components/alignfull';
 import Gallery from './components/gallery';
+import Styleguide from './components/styleguide';
 
 jQuery.noConflict();
 
@@ -37,6 +38,9 @@ jQuery.noConflict();
 
         const gallery = new Gallery();
         gallery.init();
+
+        const styleguide = new Styleguide();
+        styleguide.init();
 
         var $el = $('.parallax-background');
         $(window).on('scroll', function () {
