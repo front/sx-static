@@ -1,0 +1,28 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+  <div id="primary" class="content-area container">
+    <main id="main" class="site-main search-results" role="main">
+
+      {% set breadcrumb = ["home", "Search"] %}
+      {% include "components/breadcrumb.twig" with breadcrumb %}
+
+      <div class="search-field container--centered">
+       {% include "blocks/search-form.twig" %}
+      </div>
+      <header class="search-results__header container--centered">
+        <h1 class="search-results__title">Search Results for</h1>
+        <span class="search-results__query">Coal</span>
+        <span class="search-results__hits">(20 hits)</span>
+      </header><!-- .page-header -->
+      <div class="search-posts container--centered">
+
+        {% for item in range(1,6) %}
+          {% include "teasers/search-result.twig" %}
+        {% endfor %}
+      </div>
+
+      {% include "components/pagination.twig" %}
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
