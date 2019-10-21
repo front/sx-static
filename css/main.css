@@ -744,6 +744,36 @@ big {
   margin-left: 0;
   margin-right: 0; }
 
+.styleguide-section-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e5e3e3; }
+
+.styleguide-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .styleguide-actions .view-code,
+  .styleguide-actions .view-on-github {
+    cursor: pointer;
+    margin-left: 20px; }
+    .styleguide-actions .view-code:hover svg path,
+    .styleguide-actions .view-on-github:hover svg path {
+      fill: #e93350; }
+  .styleguide-actions :first-child {
+    margin-left: auto; }
+
+.styleguide-code {
+  display: none; }
+  .styleguide-code pre {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .styleguide-code code {
+    white-space: pre-wrap; }
+
 /*
 table
 th
@@ -3070,7 +3100,7 @@ input {
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     will-change: transform, top; }
-  .styled-input__field:focus + .styled-input__placeholder {
+  .styled-input__field:focus + .styled-input__placeholder, .styled-input__field:not(:placeholder-shown) + .styled-input__placeholder {
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
