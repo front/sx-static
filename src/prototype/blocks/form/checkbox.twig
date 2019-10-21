@@ -1,0 +1,10 @@
+<div class="input-checkbox">
+  <label class="input-checkbox__label">
+    <input type="checkbox"  name="{{ name }}" value="{{ value }}"
+      {% if checked %}checked{% endif %}
+      {% if disabled %}disabled{% endif %}
+    >
+    <span class="input-checkbox__icon"></span>
+    <span class="input-checkbox__desc">{{ label }}</span>
+  </label>
+</div>

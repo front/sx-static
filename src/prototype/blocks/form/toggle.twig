@@ -1,0 +1,10 @@
+<div class="input-toggle">
+  <input type="checkbox"
+    id="{{ id }}"
+    name="{{ name }}" 
+    value="{{ value }}"
+    {% if checked %}checked{% endif %}
+    {% if disabled %}disabled{% endif %}
+  >
+  <label for="{{ id }}">{{ label }}</label>
+</div>

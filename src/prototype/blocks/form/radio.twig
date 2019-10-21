@@ -1,0 +1,10 @@
+<div class="input-radio">
+  <label class="input-radio__label">
+    <input type="radio" name="{{ name }}" value="{{ value }}"
+      {% if checked %}checked{% endif %}
+      {% if disabled %}disabled{% endif %}
+    >
+    <span class="input-radio__icon"></span>
+    <span class="input-radio__desc">{{ label }}</span>
+  </label>
+</div>
