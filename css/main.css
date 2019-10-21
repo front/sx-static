@@ -772,7 +772,8 @@ big {
     padding-top: 0;
     padding-bottom: 0; }
   .styleguide-code code {
-    white-space: pre-wrap; }
+    white-space: pre-wrap;
+    margin-bottom: -1.6em; }
 
 /*
 table
