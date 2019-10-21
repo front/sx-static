@@ -266,7 +266,8 @@ $top-padding: 30px;
     will-change: transform, top;
   }
   &__field{
-    &:focus{
+    &:focus,
+    &:not(:placeholder-shown){
       + .#{$styled-input}{
         &__placeholder{
           top:0;
