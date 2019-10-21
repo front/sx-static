@@ -1,0 +1,55 @@
+{% extends "layouts::base.twig" %}
+
+{% block content %}
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div class="container">
+
+        <div class="entry-content">
+
+          <h1>Newsletter subscription</h1>
+
+          <section class="wp-block-newsletter">
+            <div class="container">
+              {% include "blocks/newsletter.twig" %}
+            </div>
+          </section>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+          <section class="wp-block-newsletter wp-block-newsletter--colored alignfull">
+            <div class="container">
+              {% include "blocks/newsletter.twig" with {
+                button_class: "btn--black"
+              } %}
+            </div>
+          </section>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <section class="wp-block-newsletter wp-block-newsletter--white wp-block-newsletter--border alignfull">
+            <div class="container">
+              {% include "blocks/newsletter.twig" %}
+            </div>
+          </section>
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+        </div>
+
+      </div>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+{% endblock %}
