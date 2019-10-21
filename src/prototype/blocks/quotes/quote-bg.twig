@@ -2,13 +2,15 @@
   <blockquote>
     <div class="quote">
       <span class="quote__icon">
-      <svg class="icon" width="32" height="30">
-        <use xlink:href="build/spritemap.svg#apostrophes"></use>
-      </svg>
-    </span>
+        <svg class="icon" width="32" height="30">
+          <use xlink:href="spritemap.svg#apostrophes"></use>
+        </svg>
+      </span>
       <div class="quote__text">
         <p>{{ quote }}</p>
-        <cite>— {{ author }}</cite>
+        {% if cite %}
+          <cite>— {{ cite }}</cite>
+        {% endif %}
       </div>
     </div>
   </blockquote>
