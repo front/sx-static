@@ -1,15 +1,14 @@
 {% extends "layouts::base.twig" %}
 
-{% block content %}
+{% block content %} 
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <div class="container">
         <br>
 
-        <h1>Img/video + cta - with background</h1>
+        <h1>Img/video + cta - without background</h1>
 
-
-        <div class="wp-block-starterx-img-txt alignfull">
+        <div class="wp-block-starterx-img-txt wp-block-starterx-img-txt--no-bg alignfull">
           <div class="wrapper">
             {% include "blocks/image-text.twig" with {
               img: "text-img/Rectangle2.3.jpg",
@@ -24,7 +23,7 @@
         <br>
         <br>
 
-        <div class="wp-block-starterx-img-txt alignfull">
+        <div class="wp-block-starterx-img-txt wp-block-starterx-img-txt--no-bg alignfull">
           <div class="wrapper">
             <div class="row columns-2">
               {% include "blocks/image-text.twig" with {
@@ -53,7 +52,7 @@
         <br>
 
 
-        <div class="wp-block-starterx-img-txt alignwide">
+        <div class="wp-block-starterx-img-txt wp-block-starterx-img-txt--no-bg alignwide">
           <div class="wrapper">
             {% include "blocks/image-text.twig" with {
               img: "text-img/Rectangle2.11.jpg",
