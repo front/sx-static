@@ -339,24 +339,17 @@
 
                 <div class="tag-cloud-links tag-cloud-links--inside-article">
                   <div class="tag-cloud-links__items">
-                    <div class="tag-cloud-link is-active">
-                      Coal
-                    </div>
-                    <div class="tag-cloud-link">
-                      nature
-                    </div>
-                    <div class="tag-cloud-link">
-                      photography
-                    </div>
-                    <div class="tag-cloud-link">
-                      rocks-gems-dark
-                    </div>
-                    <div class="tag-cloud-link">
-                      black&white
-                    </div>
-                    <div class="tag-cloud-link">
-                      people
-                    </div>
+                    {% set buttons = [
+                      { "text": "Coal", class: "is-active" },
+                      { "text": "Nature" },
+                      { "text": "Photography" },
+                      { "text": "rocks-gems-dark" },
+                      { "text": "black&white" },
+                      { "text": "people" },
+                      ] %}
+                    {% for btn in buttons %}
+                      {% include "blocks/buttons/btn-tag.twig" with card %}
+                    {% endfor %}
                   </div>
                 </div>
 
