@@ -15,9 +15,13 @@
     "lint:js": "eslint src",
     "lint:css": "stylelint src/css",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "fractal": "fractal start --sync",
+    "fractal:build": "fractal build"
   },
   "devDependencies": {
+    "@frctl/fractal": "^1.2.0",
+    "@frctl/nunjucks": "^2.0.1",
     "autoprefixer": "^9.6.5",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
@@ -60,7 +64,10 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
+    "@frctl/twig": "^1.0.0-beta.5",
     "magnific-popup": "^1.1.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-attrs": "^3.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "slick-carousel": "^1.8.1",

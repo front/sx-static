@@ -24,3 +24,4 @@ local-config.json
 
 ### build directory
 build/
+build-fractal/

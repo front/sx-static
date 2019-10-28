@@ -1,0 +1,45 @@
+collated: true
+notes: |
+  `.btn` class can be applied to `<a>`, `<button>` and `<inpu type="button">` elements.
+context:
+  element: a
+  text: Basic button
+  href: http://testlenke.no
+  template: element-button
+variants:
+  - name: input
+    label: Input Element
+    context:
+      element: input
+      text:
+      attr: value="Input button" type="submit"
+  - name: black btn
+    label: Black button
+    context:
+      element: button
+      text: Tag button
+      class: btn--black
+  - name: white btn
+    label: White button
+    context:
+      element: button
+      text: Tag button
+      class: btn--white
+  - name: rounded btn
+    label: Rounded button
+    context:
+      element: button
+      text: Tag button
+      class: btn--rounded
+  - name: button tag
+    label: Tag button
+    context:
+      element: button
+      text: Tag button
+      class: tag-cloud-link
+  - name: button tag
+    label: Tag button
+    context:
+      element: button
+      text: Tag button
+      class: tag-cloud-link is-active
