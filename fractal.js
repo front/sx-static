@@ -21,7 +21,7 @@ const twigAdapter = require('@frctl/twig')({
 fractal.set('project.title', 'StarterX static components');
 
 /* Tell Fractal where the components will live */
-fractal.components.set('path', __dirname + '/src/components');
+fractal.components.set('path', __dirname + '/src/prototypes');
 
 /* Tell Fractal where the documentation pages will live */
 fractal.docs.set('path', __dirname + '/src/docs');
