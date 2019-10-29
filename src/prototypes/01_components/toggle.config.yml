@@ -1,0 +1,14 @@
+collated: true
+notes: 
+context:
+  label: Toggle element (True or False)
+  template: toggle-element
+  name: text-input
+  id:  toggle_input
+  attr: checked="checked"
+variants:
+  - name: disabled
+    context:
+      label: Toggle element (Disabled)
+      id:  toggle_input_disabled
+      attr: disabled="disabled"
