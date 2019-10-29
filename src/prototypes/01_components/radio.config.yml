@@ -1,0 +1,18 @@
+collated: true
+notes: 
+context:
+  label: Checkbox label
+  template: element-checkbox
+  name: checkbox
+  value: checkbox-value
+variants:
+  - name: disabled-checkbox
+    label: Disabled checkbox
+    context:
+      value: disabled-checkbox
+      attr: disabled="disabled"
+  - name: checked-checkbox
+    label: Checked checkbox out of the box
+    context:
+      value: checked-checkbox
+      attr: checked="checked"
