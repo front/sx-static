@@ -1,0 +1,13 @@
+<label class="{{ class }}" for="{{ id }}">
+  <input
+    type="{{ type }}"
+    class="{{ class }}__field"
+    name="{{ name }}"
+    id="{{ id }}"
+    placeholder="{{ placeholder }} "
+    {{ attr }}
+  >
+  {% if styled_placeholder %}
+    <span class="styled-input__placeholder">{{ styled_placeholder }}</span>
+  {% endif %}
+</label>

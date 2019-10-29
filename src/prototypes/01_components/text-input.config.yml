@@ -1,0 +1,24 @@
+collated: true
+notes: 
+context:
+  label: Text input label
+  template: element-checkbox
+  name: text-input
+  type: text
+  id:  text_input
+  placeholder: Text input placeholder
+variants:
+  - name: styled-placeholder-input
+    type: email
+    id:  text_input_styled
+    context:
+      class: styled-input
+      attr: required
+      styled_placeholder: Styled placeholder text input
+      placeholder: 
+  - name: disabled-text-input
+    type: tel
+    id:  text_input_disabled
+    placeholder: Disabled text input
+    context:
+      attr: disabled="disabled"
