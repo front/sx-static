@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
 
 
-<title>Button: Rounded button | StarterX static components</title>
+<title>Text Input: Styled Placeholder Input | StarterX static components</title>
 
 </head>
 <body>
@@ -52,14 +52,14 @@
     
     
 
-<div class="Pen" data-behaviour="pen" id="pen-b984ab46ff2577f6bd73d244ab1c50cc">
+<div class="Pen" data-behaviour="pen" id="pen-58941334fab7874a16644e42e5da9183">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/button--rounded-btn.html" title="Component preview">
-            Button: Rounded button
+        <a class="Pen-previewLink" href="../preview/text-input--styled-placeholder-input.html" title="Component preview">
+            Text Input: Styled Placeholder Input
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -79,14 +79,14 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-b984ab46ff2577f6bd73d244ab1c50cc">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-58941334fab7874a16644e42e5da9183">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/button--rounded-btn.html"
+                src="../preview/text-input--styled-placeholder-input.html"
                 sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
@@ -101,7 +101,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-b984ab46ff2577f6bd73d244ab1c50cc">
+    <div class="Browser" data-behaviour="browser" id="browser-58941334fab7874a16644e42e5da9183">
 
     
 
@@ -110,19 +110,19 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-html">HTML</a>
+            <a href="#browser-58941334fab7874a16644e42e5da9183-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-view">View</a>
+            <a href="#browser-58941334fab7874a16644e42e5da9183-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-context">Context</a>
+            <a href="#browser-58941334fab7874a16644e42e5da9183-panel-context">Context</a>
         </li>
         
         
@@ -132,13 +132,13 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-info">Info</a>
+            <a href="#browser-58941334fab7874a16644e42e5da9183-panel-info">Info</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-notes">Notes</a>
+            <a href="#browser-58941334fab7874a16644e42e5da9183-panel-notes">Notes</a>
         </li>
         
         
@@ -148,32 +148,58 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-58941334fab7874a16644e42e5da9183-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://testlenke.no"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--rounded"</span>&gt;</span>Tag button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"styled-input"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"text_input"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"styled-input__field"</span>
+    <span class="hljs-attr">name</span>=<span class="hljs-string">"text-input"</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">"text_input"</span>
+    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">" "</span>
+    <span class="hljs-attr">required</span>
+  &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"styled-input__placeholder"</span>&gt;</span>Styled placeholder text input<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-58941334fab7874a16644e42e5da9183-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{ element }}</span><span class="xml"><span class="hljs-tag"> </span></span><span class="hljs-template-variable">{{ attr }}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ href }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn </span></span></span><span class="hljs-template-variable">{{ class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ text }}</span><span class="xml"><span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{ element }}</span><span class="xml"><span class="hljs-tag">&gt;</span></span></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">__field"</span>
+    <span class="hljs-attr">name</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ name }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+    <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ placeholder }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> "</span>
+    </span></span><span class="hljs-template-variable">{{ attr }}</span><span class="xml"><span class="hljs-tag">
+  &gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> styled_placeholder %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"styled-input__placeholder"</span>&gt;</span></span><span class="hljs-template-variable">{{ styled_placeholder }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-58941334fab7874a16644e42e5da9183-panel-context">
     <code class="Code Code--lang-json">
         
             
             <pre>{
-  <span class="hljs-attr">"element"</span>: <span class="hljs-string">"button"</span>,
-  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Tag button"</span>,
-  <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://testlenke.no"</span>,
-  <span class="hljs-attr">"template"</span>: <span class="hljs-string">"element-button"</span>,
-  <span class="hljs-attr">"class"</span>: <span class="hljs-string">"btn--rounded"</span>
+  <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Text input label"</span>,
+  <span class="hljs-attr">"template"</span>: <span class="hljs-string">"element-checkbox"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"text-input"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"text"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"text_input"</span>,
+  <span class="hljs-attr">"placeholder"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"class"</span>: <span class="hljs-string">"styled-input"</span>,
+  <span class="hljs-attr">"attr"</span>: <span class="hljs-string">"required"</span>,
+  <span class="hljs-attr">"styled_placeholder"</span>: <span class="hljs-string">"Styled placeholder text input"</span>
 }</pre>
             
         
@@ -185,11 +211,11 @@
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-58941334fab7874a16644e42e5da9183-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@button--rounded-btn</span>
+            <span class="Meta-value">@text-input--styled-placeholder-input</span>
         </li>
         
         
@@ -197,35 +223,19 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="button--default.html">
+                <a href="text-input--default.html">
                     <span>Default</span>
                 </a>, 
             
-                <a href="button--input.html">
-                    <span>Input Element</span>
-                </a>, 
-            
-                <a href="button--black-btn.html">
-                    <span>Black button</span>
-                </a>, 
-            
-                <a href="button--white-btn.html">
-                    <span>White button</span>
-                </a>, 
-            
                 <a href="">
-                    <span>Rounded button</span>
+                    <span>Styled Placeholder Input</span>
                 </a>, 
             
-                <a href="button--button-tag.html">
-                    <span>Tag button</span>
-                </a>, 
-            
-                <a href="button--button-tag.html">
-                    <span>Tag button</span>
+                <a href="text-input--disabled-text-input.html">
+                    <span>Disabled Text Input</span>
                 </a>
             
             </span>
@@ -235,12 +245,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/button--rounded-btn.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/text-input--styled-placeholder-input.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/button--rounded-btn.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/text-input--styled-placeholder-input.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -250,7 +260,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/prototypes/01_components/button.twig</span>
+            <span class="Meta-value">src/prototypes/01_components/text-input.twig</span>
         </li>
         
         
@@ -258,11 +268,10 @@
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-b984ab46ff2577f6bd73d244ab1c50cc-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-58941334fab7874a16644e42e5da9183-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p><code>.btn</code> class can be applied to <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code> and <code>&lt;inpu type=&quot;button&quot;&gt;</code> elements.</p>
-
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
     </div>
 </div>
