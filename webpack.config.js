@@ -22,7 +22,7 @@ const generateHTMLPlugins = () =>
         }) : null
   );
 
-module.exports = {
+let webpackSettings = {
   node: {
     fs: 'empty',
   },
@@ -146,16 +146,6 @@ module.exports = {
       styles: path.join(__dirname, 'src/scss/_sprites.scss')
     }),
     ...generateHTMLPlugins(),
-    new BrowserSyncPlugin({
-      // BrowserSync options
-      host: 'localhost',
-      port: 3000,
-      server: {
-        baseDir: ['build']
-      },
-      open: true,
-      browser: 'google chrome'
-    }),
     new CopyWebpackPlugin([
       {
         from: './img',
@@ -164,3 +154,19 @@ module.exports = {
     ])
   ],
 };
+
+// Only run browser sync when fractal is not running
+if (process.argv.indexOf('--no-browsersync') < 0) {
+  webpackSettings.plugins.push(new BrowserSyncPlugin({
+    // BrowserSync options
+    host: 'localhost',
+    port: 3000,
+    server: {
+      baseDir: ['build']
+    },
+    open: true,
+    browser: 'google chrome'
+  }));
+}
+
+module.exports = webpackSettings;

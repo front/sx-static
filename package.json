@@ -8,15 +8,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "fractal build && concurrently \"webpack --run-dev --watch --no-browsersync\" \"fractal start\"",
     "dev": "webpack --run-dev --watch",
-    "dev:lose": "yarn dev --watch-aggregate-timeout 300 --watch-poll 500",
     "build": "webpack --run-prod",
     "lint:js": "eslint src",
     "lint:css": "stylelint src/css",
     "predeploy": "npm run build && npm run fractal:build",
     "deploy": "gh-pages -d build-fractal",
-    "fractal": "fractal start --sync",
+    "fractal": "fractal build && fractal start --sync",
     "fractal:build": "fractal build"
   },
   "devDependencies": {
@@ -32,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "concurrently": "^5.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^1.0.0",
     "eslint": "5.4.0",
