@@ -47,6 +47,11 @@ fractal.components.set('default.status', 'wip'); // default is 'ready'
 
 // Enable BrowserSync globally
 fractal.web.set('server.sync', true);
+fractal.web.set('server.syncOptions', {
+  open: true,
+  browser: ['google chrome'],
+  notify: false
+});
 
 // Set build destination
 fractal.web.set('builder.dest', __dirname + '/build-fractal');
